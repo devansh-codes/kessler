@@ -42,6 +42,7 @@ default-groups = ["dev"]
 line-length = 110
 target-version = "py312"
 src = ["src", "tests"]
+extend-exclude = ["notebooks"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP"]
