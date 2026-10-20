@@ -1,0 +1,4 @@
+#JCAT	Satcat	Launch_Tag	Piece	Type	Name	PLName	LDate	Parent	SDate	Primary	DDate	Status	Dest	Owner	State	Manufacturer	Bus	Motor	Mass	MassFlag	DryMass	DryFlag	TotMass	TotFlag	Length	LFlag	Diameter	DFlag	Span	SpanFlag	Shape	ODate	Perigee	PF	Apogee	AF	Inc	IF	OpOrbit	OQUAL	AltNames
+# Updated 2026 Oct 17 1832:55
+S100472   	100472	2026-195	2026-195H	R2          	CZ-6C Y1 Stage 2	CZ-6  Stage 2	2026 Aug 25	R86706	2026 Aug 25 0335?	Earth	-	O	-	MAI	CN	SAST	CZ-6 Stage 2	-	    3000 	 	   3000 	 	    3000 	 	   8.0 	?	  2.9 	 	    8.0 	?	Cyl	2026 Aug 27	     396	 	     481	 	 97.54 	 	LLEO/S	-	-
+S101032   	101032	1988-078	1988-078C	D--X  --    	deb USA 32	-	1988 Sep  5	S19460	2026 Sep 13 2113	Earth	-	O	-	NRO	US	LMSC/MOTO	-	-	       0 	 	      0 	 	       0 	 	   0.0 	 	  0.0 	 	    0.0 	 	-	2026 Oct 13	     771	 	     784	 	 84.98 	 	LEO/I	-	-

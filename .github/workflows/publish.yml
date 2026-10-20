@@ -1,0 +1,39 @@
+name: publish
+on:
+  push: { branches: [main] }
+  workflow_run: { workflows: ["ingest"], types: [completed] }
+  workflow_dispatch:
+permissions: { contents: read, pages: write, id-token: write }
+concurrency: { group: pages, cancel-in-progress: true }
+jobs:
+  build:
+    # skip when the triggering ingest run failed outright
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7
+        with: { ref: data, path: warehouse_repo }
+      - uses: astral-sh/setup-uv@v10
+        with: { enable-cache: true }
+      - run: uv sync --frozen
+      - run: uv run kessler build  --warehouse warehouse_repo/warehouse
+      - run: uv run kessler export --warehouse warehouse_repo/warehouse --out site/public/data
+      - uses: actions/setup-node@v7
+        with: { node-version: 24, cache: npm, cache-dependency-path: site/package-lock.json }
+      - run: npm ci && npm run build
+        working-directory: site
+      - name: Bundle budget (initial JS < 250 KB gzip, excluding lazy globe/duckdb chunks)
+        working-directory: site
+        run: node scripts/check-bundle.mjs
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with: { path: site/dist }
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: { name: github-pages, url: "${{ steps.d.outputs.page_url }}" }
+    steps:
+      - id: d
+        uses: actions/deploy-pages@v5

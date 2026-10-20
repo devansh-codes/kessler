@@ -1,0 +1,32 @@
+# Ingest cadence (minimum seconds between successful fetches of each source, tracked in
+# warehouse/_state.json so the cadence survives across CI runners).
+cadence_s:
+  event_gp_current: 7200        # GP data refreshes every ~2 h
+  event_gp_first: 72000         # ~daily
+  event_satcat: 72000
+  decaying_gp: 7200
+  satcat_full: 72000
+  space_weather: 72000          # SW-Last5Years at most daily
+  swpc: 10800
+  gcat: 604800                  # weekly
+  reentry_backfill: 18000       # ~4x/day, aligned with the 6-hourly cron
+reentry_backfill:
+  intdes_per_run: 4             # each INTDES costs 2 requests (gp-last + gp-first) -> 32/day at 4 runs
+  max_requests_per_day: 40      # hard cap across all runs (plan: ~50/day)
+  lookback_days: 730
+  object_types: ["DEB", "R/B", "UNK"]
+forensics:
+  coarse_step_s: 60
+  refine_halfwidth_s: 600
+  bootstrap: 500
+  low_confidence_spread_km: 200
+  min_fragments: 3
+  dbscan_eps: 0.5
+  dbscan_min_samples: 2
+export:
+  ephem_max_bytes: 15000000
+  total_max_bytes: 250000000
+  gabbard_max_rows: 50000
+  ephem_dense_hours: 12
+  ephem_dense_step_s: 120
+  ephem_daily_days: 60

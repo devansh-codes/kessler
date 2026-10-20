@@ -1,0 +1,7 @@
+#Launch_Tag	Launch_JD	Launch_Date	LV_Type	Variant	Fairing	Flight_ID	Flight	Mission	FlightCode	Platform	Launch_Site	Launch_Pad	Ascent_Site	Ascent_Pad	Perigee	Apogee	Apoflag	Inc	Azimuth	Range	RangeFlag	Dest	OrbMass	OrbPay	Agency	LaunchCode	FailCode	Group	Category	LTCite	Cite	Notes
+# Updated 2026 Oct 17 1831:51
+1957 ALP  	2436116.31 	1957 Oct  4 1928:34	Sputnik 8K71PS	-	-	M1-PS	PS-1	PS-1	-	-	NIIP-5	LC1	-	-	      -	    938	 	-	   -	    -	 	-	   0.000 	   0.084 	MVS	OS  	-	G	Sat LEO O 1	Energiya	SFLT39-331	-
+1960 ETA  	2437107.75 	1960 Jun 22 0554	Thor Ablestar	-	-	281/AB003	Transit 2A/GRAB	Transit 2A	-	-	CC	LC17B	-	-	      -	   1061	 	-	   -	    -	 	-	   0.000 	   0.119 	AFBMD	OS  	-	G	Sat LEO O	SpaceWorld6111-33	-	-
+1981-043 	2444739.41 	1981 May 14 2145:00	Vostok 8A92M	-	-	77052  -392	Meteor-2	Meteor-2 No. 8	-	-	NIIP-53	LC43/3	-	-	      -	    925	 	-	   -	    -	 	-	   0.000 	   1.500 	RVSN	OS  	-	G	Sat LEO O	PL-WWW	XPC	-
+1988-078 	2447409.89 	1988 Sep  5 0925	Titan II SLV	-	-	23G-1	USA 32       [T2-1]	P-11 No. 5103	-	-	VS	SLC4W	-	-	      -	    809	 	-	   -	    -	 	-	   0.000 	   1.450 	AFSD	OS  	-	G	Sat LEO O	LR880906	MM/Titan	-
+2026-195 	2461277.64 	2026 Aug 25 0321:54	Chang Zheng 6C	-	-	Y1	ZK-14/15	ZK-14/15	-	-	TYSC	LC9A	-	-	    530	    544	 	 97.5 	   -	    -	 	-	   0.000 	   0.150 	ZHSH/SAST	OS  	-	G/C	Sat SSO L	xinhuanet.com	-	-

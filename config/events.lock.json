@@ -1,0 +1,9 @@
+{
+  "_comment": "Resolved parents, pinned from CelesTrak SATCAT on 2026-10-19. Delete an entry to re-resolve.",
+  "usa-32": { "norad": 19460, "intdes": "1988-078", "object_name": "USA 32" },
+  "meteor-2-7": { "norad": 12456, "intdes": "1981-043", "object_name": "METEOR 2-7" },
+  "starlink-34343": { "norad": 64157, "intdes": "2025-112", "object_name": "STARLINK-34343" },
+  "cz6c-2026-195": { "norad": 100472, "intdes": "2026-195", "object_name": "CZ-6C R/B" },
+  "starlink-35956": { "norad": 66629, "intdes": "2025-271", "object_name": "STARLINK-35956" },
+  "luch-olymp": { "norad": 40258, "intdes": "2014-058", "object_name": "LUCH (OLYMP-K 1)" }
+}

@@ -1,0 +1,84 @@
+# Event registry. `parent` may be given by NORAD id or by name; names are resolved through a
+# SATCAT NAME query and pinned in config/events.lock.json so later runs never re-resolve them.
+events:
+  - id: usa-32
+    title: "USA 32 breakup"
+    parent: { norad: 19460 }
+    intdes: "1988-078"
+    reference_time: "2026-09-13T21:13:00Z"
+    reference_precision_hours: 0.5
+    reference_sources:
+      - { label: "US Space Forces-Space notice (Space-Track)", time: "2026-09-13T21:13:00Z" }
+    alt_references:
+      - { label: "KeepTrack element-set analysis", time: "2026-09-14T05:44:00Z", dv_ms: 0.30 }
+    regime: LEO
+    blurb: >-
+      A 1988 US military satellite in a ~775 km near-polar orbit. Fragments were catalogued
+      three to four weeks after the event, all with six-digit NORAD numbers (101032-101049).
+
+  - id: meteor-2-7
+    title: "Meteor 2-7 second breakup"
+    parent: { norad: 12456 }
+    intdes: "1981-043"
+    reference_time: "2026-10-05T09:45:00Z"
+    reference_precision_hours: 0.17
+    reference_sources:
+      - { label: "Jim Shell / LeoLabs (±10 min)", time: "2026-10-05T09:45:00Z" }
+    prior_breakups: ["2004-03"]
+    regime: LEO
+    blurb: >-
+      A Soviet weather satellite at ~855 km that already fragmented in 2004. Its old debris shares
+      the 1981-043 designator, so membership must separate decades-old fragments from new ones.
+
+  - id: starlink-34343
+    title: "Starlink 34343 fragmentation"
+    parent: { name: "STARLINK-34343" }
+    intdes: null
+    reference_time: "2026-03-29T00:00:00Z"
+    reference_precision_hours: 24
+    reference_sources:
+      - { label: "SpaceX / LeoLabs statements (date only)", time: "2026-03-29T00:00:00Z" }
+    regime: LEO
+    blurb: >-
+      A ~560 km Starlink satellite that SpaceX said suffered an internal energetic event.
+      Only two fragments were ever catalogued, and both have since reentered.
+
+  - id: cz6c-2026-195
+    title: "Long March 6C upper stage"
+    parent: { norad: 100472 }
+    intdes: "2026-195"
+    reference_time: "2026-08-27T02:30:00Z"
+    reference_precision_hours: 12
+    reference_note: "LeoLabs reported 02:30 on the 27th; time zone not stated in public reporting."
+    reference_sources:
+      - { label: "LeoLabs via SpaceNews/FODNews", time: "2026-08-27T02:30:00Z" }
+    regime: LEO
+    blurb: >-
+      A Chinese rocket body that broke up two days after deploying a seven-satellite rideshare.
+      Its six-digit NORAD id (100472) cannot be expressed in the legacy TLE format.
+
+  - id: starlink-35956
+    title: "Starlink 35956 fragmentation"
+    parent: { name: "STARLINK-35956" }
+    intdes: null
+    reference_time: "2025-12-17T00:00:00Z"
+    reference_precision_hours: 24
+    reference_sources:
+      - { label: "LeoLabs (date only)", time: "2025-12-17T00:00:00Z" }
+    regime: LEO
+    blurb: >-
+      An earlier Starlink anomaly. The satellite itself reentered on 2026-01-17.
+
+  - id: luch-olymp
+    title: "Luch (Olymp-K 1) GEO event"
+    parent: { norad: 40258 }
+    intdes: "2014-058"
+    reference_time: "2026-01-30T06:09:00Z"
+    reference_precision_hours: 0.5
+    reference_sources:
+      - { label: "s2a systems optical imagery", time: "2026-01-30T06:09:00Z" }
+    regime: GEO
+    stretch: true
+    blurb: >-
+      A Russian inspector satellite in the GEO graveyard, observed optically. Deep-space (SDP4)
+      propagation; treated as a stretch case.
