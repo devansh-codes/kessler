@@ -462,10 +462,8 @@ def _write_table(d: Path, name: str, df: pd.DataFrame) -> None:
     columns need for casts like ``ts::DATE``. All times are UTC."""
     df = df.copy()
     for c in df.columns:
-        if df[c].dtype == object:
-            sample = df[c].dropna()
-            if len(sample) and isinstance(sample.iloc[0], pd.Timestamp | str) and c in TS_COLS:
-                df[c] = pd.to_datetime(df[c], utc=True, format="ISO8601")
+        if c in TS_COLS and not pd.api.types.is_datetime64_any_dtype(df[c]):
+            df[c] = pd.to_datetime(df[c], utc=True, format="ISO8601")
         if isinstance(df[c].dtype, pd.DatetimeTZDtype):
             df[c] = df[c].dt.tz_convert("UTC").dt.tz_localize(None)
     df.to_parquet(d / f"{name}.parquet", index=False, compression="zstd")

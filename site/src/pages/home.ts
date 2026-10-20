@@ -38,7 +38,19 @@ export async function render(root: HTMLElement): Promise<() => void> {
     h("div", { class: "panel-head" }, h("div", {}, h("p", { class: "eyebrow" }, "Breakup Board"), h("h2", { style: "margin-top:6px" }, "Reconstructed events")), h("p", {}, "Times are our median estimate with a 90% interval. The badge compares them with the independently reported time.")),
     board,
   );
-  root.append(hero, boardSection);
+  const explore = h(
+    "section",
+    { class: "wrap section", style: "padding-top:0" },
+    h("p", { class: "eyebrow", style: "margin-bottom:14px" }, "Explore"),
+    h(
+      "div",
+      { class: "grid grid-3" },
+      link("#/reentry", "Reentry Watch", "Probabilistic reentry dates for decaying debris, from a quantile model that beats a drag-physics baseline. Every forecast is scored after the fact."),
+      link("#/scorecard", "Rocket Stage Scorecard", "Which launch vehicles leave exploding upper stages behind? Long March 6A against Falcon 9, from McDowell's GCAT."),
+      link("#/sql", "SQL Lab", "DuckDB running in your browser over every derived table: breakup solutions, Δv, Gabbard points, forecasts."),
+    ),
+  );
+  root.append(hero, boardSection, explore);
   boardSection.querySelector<HTMLAnchorElement>("a")?.blur();
   hero.querySelector<HTMLAnchorElement>('a[href="#board"]')?.addEventListener("click", (e) => {
     e.preventDefault();
@@ -92,6 +104,10 @@ async function loadBreakupMarkers(globe: import("globe.gl").GlobeInstance): Prom
     .ringLat("lat").ringLng("lng").ringAltitude("alt")
     .ringColor(() => (t: number) => `rgba(217,89,38,${1 - t})`)
     .ringMaxRadius(6).ringPropagationSpeed(2).ringRepeatPeriod(1600);
+}
+
+function link(href: string, title: string, body: string): HTMLElement {
+  return h("a", { class: "ecard", href }, h("div", { class: "title" }, title, " →"), h("p", { class: "secondary small" }, body));
 }
 
 function kpi(k: string, v: string): HTMLElement {

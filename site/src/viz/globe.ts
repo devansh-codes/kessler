@@ -6,6 +6,7 @@ import * as THREE from "three";
 import { BASE } from "../api";
 
 const EARTH_RADIUS_KM = 6371;
+const DEG = Math.PI / 180;
 
 export interface GlobeHandle {
   globe: GlobeInstance;
@@ -105,10 +106,24 @@ export class DebrisLayer {
     this.trails.frustumCulled = false;
     globe.scene().add(this.trails);
     globe.scene().add(this.points);
+    this.calibrate();
   }
 
+  // Inline copy of three-globe's polar2Cartesian (radius 100); verified against getCoords() at startup.
+  private R = 100;
   private xyz(lat: number, lon: number, altKm: number): { x: number; y: number; z: number } {
-    return this.globe.getCoords(lat, lon, altKm / EARTH_RADIUS_KM);
+    const phi = (90 - lat) * DEG, theta = (90 - lon) * DEG, r = this.R * (1 + altKm / EARTH_RADIUS_KM);
+    const sp = Math.sin(phi);
+    return { x: r * sp * Math.cos(theta), y: r * Math.cos(phi), z: r * sp * Math.sin(theta) };
+  }
+
+  private calibrate(): void {
+    const ref = this.globe.getCoords(10, 20, 0.1);
+    const mine = this.xyz(10, 20, 0.1 * EARTH_RADIUS_KM);
+    if (Math.hypot(ref.x - mine.x, ref.y - mine.y, ref.z - mine.z) > 1e-6) {
+      // fall back to the library if its convention ever changes
+      this.xyz = (lat, lon, altKm) => this.globe.getCoords(lat, lon, altKm / EARTH_RADIUS_KM);
+    }
   }
 
   /** states[i] = [lat, lon, alt] or null (hidden). fade[i] in [0,1] multiplies brightness. */

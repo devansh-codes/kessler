@@ -63,7 +63,7 @@ export async function render(root: HTMLElement, params: Record<string, string>):
     Promise.all([api.ephemMeta(id), import("../viz/debrisplayer")])
       .then(async ([meta, mod]) => {
         shell.replaceChildren();
-        cleanups.push(await mod.mountDebrisPlayer(shell, id, meta));
+        cleanups.push(await mod.mountDebrisPlayer(shell, id, meta, Number(params.stress) || 0));
         globeNote.textContent =
           (meta.reconstructed
             ? `First ${(meta.dense_until_s / 3600).toFixed(0)} hours: the cloud is reconstructed. Every fragment starts at the solved breakup point with its fitted Δv and is propagated with two-body + J2 dynamics. After that: SGP4 daily snapshots from catalogued element sets. `

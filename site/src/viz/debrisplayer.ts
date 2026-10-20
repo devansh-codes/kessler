@@ -8,7 +8,9 @@ const PARENT = "#3987e5";
 const FRAG = "#d95926";
 const SAMPLES_PER_SECOND = 14;
 
-export async function mountDebrisPlayer(shell: HTMLElement, eventId: string, meta: EphemMeta): Promise<() => void> {
+/** ``stress`` > 0 replicates the fragments (with longitude offsets) to benchmark ~N objects. */
+export async function mountDebrisPlayer(shell: HTMLElement, eventId: string, meta0: EphemMeta, stress = 0): Promise<() => void> {
+  let meta = meta0;
   const host = h("div", { class: "globe-host" });
   const clock = h("div", { class: "clock", "aria-live": "off" }, "—");
   const phase = h("div", { class: "badge", style: "pointer-events:none" }, "");
@@ -28,7 +30,8 @@ export async function mountDebrisPlayer(shell: HTMLElement, eventId: string, met
   const timeline = h("div", { class: "timeline" }, play, slider, speed);
   shell.append(host, hud, legend, timeline);
 
-  const data = await api.ephem(eventId, meta);
+  let data = await api.ephem(eventId, meta);
+  if (stress > meta.N) [data, meta] = replicate(data, meta, stress);
   const g = createGlobe(host, { autoRotate: false, altitude: 1.9 });
   const globe = g.globe;
   if (meta.breakup) {
@@ -73,7 +76,15 @@ export async function mountDebrisPlayer(shell: HTMLElement, eventId: string, met
     return out;
   }
 
+  const perf = { frames: 0, drawMs: 0, start: performance.now() };
+  (window as unknown as { __kessler?: unknown }).__kessler = { perf, N: meta.N };
   function draw(): void {
+    const d0 = performance.now();
+    drawInner();
+    perf.drawMs += performance.now() - d0;
+    perf.frames++;
+  }
+  function drawInner(): void {
     const tSec = tSecAt(pos);
     const ps = interpState(data, times, meta.N, parentIdx, tSec);
     parentLayer.update([ps], undefined, [trailFor(parentIdx, pos, 14)]);
@@ -151,4 +162,24 @@ export async function mountDebrisPlayer(shell: HTMLElement, eventId: string, met
     fragLayer?.dispose();
     g.dispose();
   };
+}
+
+function replicate(data: Float32Array, meta: EphemMeta, n: number): [Float32Array, EphemMeta] {
+  const frags = meta.norads.map((_, i) => i).filter((i) => i !== meta.parent_index);
+  if (!frags.length) return [data, meta];
+  const N = n;
+  const out = new Float32Array(meta.T * N * 3);
+  const src: number[] = [meta.parent_index];
+  for (let k = 1; k < N; k++) src.push(frags[k % frags.length]);
+  for (let t = 0; t < meta.T; t++) {
+    for (let j = 0; j < N; j++) {
+      const s = (t * meta.N + src[j]) * 3, d = (t * N + j) * 3;
+      out[d] = data[s];
+      let lon = data[s + 1] + (j === 0 ? 0 : ((j * 37) % 360) * 0.05);
+      if (lon > 180) lon -= 360;
+      out[d + 1] = lon;
+      out[d + 2] = data[s + 2];
+    }
+  }
+  return [out, { ...meta, N, parent_index: 0, norads: src.map((i) => meta.norads[i]), names: src.map((i) => meta.names[i]), decay_s: src.map((i) => meta.decay_s[i]) }];
 }

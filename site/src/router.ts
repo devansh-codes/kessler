@@ -17,12 +17,14 @@ export function route(path: string, name: string, load: Loader, title: (p: Recor
 }
 
 export function matchRoute(hash: string): { route: Route; params: Record<string, string> } | null {
-  const path = hash.replace(/^#/, "") || "/";
+  const [rawPath, query] = (hash.replace(/^#/, "") || "/").split("?");
+  const path = rawPath || "/";
   for (const r of routes) {
     const m = path.match(r.pattern);
     if (m) {
       const params: Record<string, string> = {};
       r.keys.forEach((k, i) => (params[k] = decodeURIComponent(m[i + 1])));
+      new URLSearchParams(query ?? "").forEach((v, k) => (params[k] = v));
       return { route: r, params };
     }
   }
