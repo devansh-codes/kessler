@@ -27,7 +27,7 @@ export function base(w: number, h: number, extra: Record<string, unknown> = {}):
     marginRight: 20,
     marginTop: 14,
     marginBottom: 36,
-    style: { background: "transparent", color: "#b9bfca", fontSize: "12px", fontFamily: "system-ui, -apple-system, Segoe UI, sans-serif", overflow: "visible" },
+    style: { background: "transparent", color: "#c9ccd3", fontFamily: "Jost, system-ui, sans-serif", fontSize: "12px", overflow: "visible" },
     ...extra,
   };
 }

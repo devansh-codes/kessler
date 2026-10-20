@@ -4,33 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="dark" />
-    <meta name="theme-color" content="#0a0c10" />
+    <meta name="theme-color" content="#000000" />
     <title>Kessler · Orbital Breakup Forensics</title>
     <meta name="description" content="Reconstructing 2026's satellite and rocket-stage breakups from public orbital data: when and where they fragmented, how hard the pieces were kicked, and when they will fall." />
     <meta property="og:title" content="Kessler · Orbital Breakup Forensics" />
     <meta property="og:description" content="Forensic reconstructions of 2026 orbital breakups from public CelesTrak data, with a 3D debris globe, Δv analysis, reentry forecasts and an in-browser SQL lab." />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='7' fill='%233987e5'/%3E%3Cellipse cx='16' cy='16' rx='14' ry='5' fill='none' stroke='%23d95926' stroke-width='2' transform='rotate(-25 16 16)'/%3E%3C/svg%3E" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='7' fill='%233987e5'/%3E%3Cellipse cx='16' cy='16' rx='14' ry='5' fill='none' stroke='%23e2b979' stroke-width='2' transform='rotate(-25 16 16)'/%3E%3C/svg%3E" />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
     <header class="topbar">
       <a class="brand" href="#/" aria-label="Kessler home">
-        <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><circle cx="16" cy="16" r="7" fill="var(--series-1)"/><ellipse cx="16" cy="16" rx="14" ry="5" fill="none" stroke="var(--series-2)" stroke-width="2" transform="rotate(-25 16 16)"/></svg>
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="7" fill="#3987e5"/><ellipse cx="16" cy="16" rx="14" ry="5" fill="none" stroke="#e2b979" stroke-width="1.6" transform="rotate(-25 16 16)"/><circle cx="27.5" cy="10.6" r="1.6" fill="#d95926"/></svg>
         <span>Kessler</span>
       </a>
       <nav class="nav" aria-label="Primary">
         <a href="#/" data-route="home">Breakups</a>
         <a href="#/reentry" data-route="reentry">Reentry</a>
         <a href="#/scorecard" data-route="scorecard">Scorecard</a>
-        <a href="#/sql" data-route="sql">SQL Lab</a>
         <a href="#/methods" data-route="methods">Methods</a>
-        <a href="#/status" data-route="status">Status</a>
       </nav>
+      <div class="top-actions">
+        <a class="btn sm" href="#/status" data-route="status">Status</a>
+        <a class="btn sm primary" href="#/sql" data-route="sql">SQL Lab</a>
+      </div>
     </header>
     <main id="main" tabindex="-1"></main>
     <footer class="footer">
-      <span>Orbital data: <a href="https://celestrak.org" rel="noopener">CelesTrak</a> (Dr. T.S. Kelso; 18 SDS). Launch lineage: <a href="https://planet4589.org/space/gcat" rel="noopener">GCAT</a> (J. McDowell, CC-BY 4.0). Space weather: CelesTrak, NOAA SWPC. Earth: NASA Visible Earth.</span>
-      <span><a href="https://github.com/devansh-codes/kessler" rel="noopener">Source on GitHub</a> · <a href="#/methods">Methods &amp; attribution</a></span>
+      <div class="footer-cols">
+        <div class="about">
+          <a class="brand" href="#/"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="7" fill="#3987e5"/><ellipse cx="16" cy="16" rx="14" ry="5" fill="none" stroke="#e2b979" stroke-width="1.6" transform="rotate(-25 16 16)"/><circle cx="27.5" cy="10.6" r="1.6" fill="#d95926"/></svg><span>Kessler</span></a>
+          <p>Orbital breakup forensics from public data. Rebuilt every six hours on GitHub Actions.</p>
+        </div>
+        <div><h4>Explore</h4><ul><li><a href="#/">Breakup Board</a></li><li><a href="#/reentry">Reentry Watch</a></li><li><a href="#/scorecard">Rocket Scorecard</a></li><li><a href="#/sql">SQL Lab</a></li></ul></div>
+        <div><h4>Events</h4><ul><li><a href="#/event/usa-32">USA 32</a></li><li><a href="#/event/meteor-2-7">Meteor 2-7</a></li><li><a href="#/event/starlink-34343">Starlink 34343</a></li><li><a href="#/event/cz6c-2026-195">Long March 6C</a></li></ul></div>
+        <div><h4>Project</h4><ul><li><a href="#/methods">Methods</a></li><li><a href="#/status">Pipeline status</a></li><li><a href="https://github.com/devansh-codes/kessler" rel="noopener">Source code</a></li></ul></div>
+        <div><h4>Data</h4><ul><li><a href="https://celestrak.org" rel="noopener">CelesTrak</a></li><li><a href="https://planet4589.org/space/gcat" rel="noopener">GCAT (CC-BY 4.0)</a></li><li><a href="https://www.swpc.noaa.gov/" rel="noopener">NOAA SWPC</a></li><li><a href="https://visibleearth.nasa.gov/" rel="noopener">NASA Visible Earth</a></li></ul></div>
+      </div>
+      <div class="footer-base">
+        <span>© 2026 Kessler · MIT licensed code</span>
+        <span>Orbital data: CelesTrak (Dr. T.S. Kelso; 18 SDS) · Launch lineage: J. McDowell, GCAT · Space weather: CelesTrak, NOAA SWPC · Earth: NASA</span>
+      </div>
     </footer>
     <script type="module" src="/src/main.ts"></script>
   </body>

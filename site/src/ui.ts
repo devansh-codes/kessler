@@ -111,7 +111,7 @@ export function chartPanel(opts: {
   const body = h("div", { class: "chart" }, opts.chart);
   let showingTable = false;
   const btn = opts.table
-    ? h("button", { class: "btn toggle-table", type: "button", "aria-pressed": "false" }, "Table")
+    ? h("button", { class: "btn sm toggle-table", type: "button", "aria-pressed": "false" }, "Table")
     : null;
   if (btn && opts.table) {
     const makeTable = opts.table;

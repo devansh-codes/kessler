@@ -57,7 +57,7 @@ export async function render(root: HTMLElement): Promise<() => void> {
           marginLeft: Math.min(200, w * 0.36),
           marginRight: 20,
           marginBottom: 30,
-          style: { background: "transparent", color: "#b9bfca", fontSize: "11.5px" },
+          style: { background: "transparent", color: "#c9ccd3", fontFamily: "Jost, system-ui, sans-serif", fontSize: "11.5px" },
           x: { type: "utc", grid: true, label: null, domain: [new Date(now - 2 * DAY), new Date(Math.min(now + 100 * DAY, Math.max(...soon.map((f) => new Date(f.p90).getTime())) + 3 * DAY))], clamp: true },
           y: { domain: soon.map((f) => label(f)), label: null, tickFormat: (s: string) => (s.length > 28 ? s.slice(0, 27) + "…" : s) },
           marks: [
@@ -166,7 +166,7 @@ function calibrationPanel(bt: Backtest, cleanups: (() => void)[]): HTMLElement {
         height: 280,
         marginLeft: 52,
         marginBottom: 40,
-        style: { background: "transparent", color: "#b9bfca", fontSize: "12px" },
+        style: { background: "transparent", color: "#c9ccd3", fontFamily: "Jost, system-ui, sans-serif", fontSize: "12px" },
         x: { domain: [0.4, 1], label: "Nominal coverage", tickFormat: "%", grid: true },
         y: { domain: [0, 1], label: "Empirical coverage (holdout)", tickFormat: "%", grid: true },
         marks: [
@@ -201,7 +201,7 @@ function leadPanel(bt: Backtest, cleanups: (() => void)[]): HTMLElement {
         height: 280,
         marginLeft: 52,
         marginBottom: 40,
-        style: { background: "transparent", color: "#b9bfca", fontSize: "12px" },
+        style: { background: "transparent", color: "#c9ccd3", fontFamily: "Jost, system-ui, sans-serif", fontSize: "12px" },
         x: { type: "log", label: "Days before reentry (bin upper edge)", grid: true, ticks: [1, 3, 7, 14, 30, 60, 120], tickFormat: (v: number) => String(v) },
         y: { type: "log", label: "Mean absolute error (days)", grid: true },
         marks: [
@@ -238,7 +238,7 @@ function spaceWeatherPanel(sw: SpaceWeather, cleanups: (() => void)[]): HTMLElem
     responsive(top, (w) =>
       Plot.plot({
         width: w, height: 170, marginLeft: 52, marginBottom: 20,
-        style: { background: "transparent", color: "#b9bfca", fontSize: "12px" },
+        style: { background: "transparent", color: "#c9ccd3", fontFamily: "Jost, system-ui, sans-serif", fontSize: "12px" },
         x: { type: "utc", domain: xDomain, label: null, grid: true, axis: null },
         y: { label: "F10.7 (sfu)", grid: true, domain: [0, Math.max(...obs.map((d) => d.f107 ?? 0)) * 1.05] },
         marks: [
@@ -252,7 +252,7 @@ function spaceWeatherPanel(sw: SpaceWeather, cleanups: (() => void)[]): HTMLElem
     responsive(bottom, (w) =>
       Plot.plot({
         width: w, height: 150, marginLeft: 52, marginBottom: 30,
-        style: { background: "transparent", color: "#b9bfca", fontSize: "12px" },
+        style: { background: "transparent", color: "#c9ccd3", fontFamily: "Jost, system-ui, sans-serif", fontSize: "12px" },
         x: { type: "utc", domain: xDomain, label: null, grid: true },
         y: { label: "Daily max Kp", grid: true, domain: [0, 9] },
         marks: [

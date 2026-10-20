@@ -75,12 +75,12 @@ export async function render(root: HTMLElement): Promise<() => void> {
       marginLeft: Math.min(150, w * 0.3),
       marginRight: 56,
       marginBottom: 30,
-      style: { background: "transparent", color: "#b9bfca", fontSize: "12px" },
+      style: { background: "transparent", color: "#c9ccd3", fontFamily: "Jost, system-ui, sans-serif", fontSize: "12px" },
       x: { label: metric === "stage_debris" ? "Catalogued debris from rocket stages" : "Stage debris per orbital launch", grid: true },
       y: { domain: data.map((d) => d.family), label: null },
       marks: [
         Plot.barX(data, { y: "family", x: metric, fill: (d: ScorecardRow) => (d.highlight ? C.frag : C.parent), fillOpacity: (d: ScorecardRow) => (d.highlight ? 1 : 0.75), insetTop: 3, insetBottom: 3, rx: 3, tip: true, title: (d: ScorecardRow) => `${d.family}\n${fmtNum(d.launches)} orbital launches\n${fmtNum(d.stage_debris)} stage debris (${fmtNum(d.stage_debris_in_orbit)} still in orbit)\n${fmtNum(d.debris_per_launch, 2)} per launch\n${d.frag_events} stage breakups\nrocket bodies in orbit: ${fmtNum(d.rb_in_orbit)}` }),
-        Plot.text(data, { y: "family", x: metric, text: (d: ScorecardRow) => fmtNum(d[metric] as number, metric === "stage_debris" ? 0 : 1), textAnchor: "start", dx: 6, fill: "#b9bfca" }),
+        Plot.text(data, { y: "family", x: metric, text: (d: ScorecardRow) => fmtNum(d[metric] as number, metric === "stage_debris" ? 0 : 1), textAnchor: "start", dx: 6, fill: "#c9ccd3" }),
         Plot.ruleX([0], { stroke: "#3a4150" }),
       ],
     } as Plot.PlotOptions);

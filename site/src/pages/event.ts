@@ -2,6 +2,7 @@ import { api, DataMissing } from "../api";
 import type { DvRow, EventSummary, GabbardRow, Reference } from "../types";
 import { chartPanel, dataTable, errorBox, flagBadge, fmtDate, fmtMinutes, fmtNum, fmtUTC, h, loading, prefersReducedMotion } from "../ui";
 import { C, legendItems, Plot, responsive } from "../viz/plot";
+import { reticle } from "../viz/porthole";
 
 const MODE_TEXT: Record<string, string> = {
   fragments: "Solved from catalogued fragments",
@@ -31,7 +32,7 @@ export async function render(root: HTMLElement, params: Record<string, string>):
     h(
       "header",
       { class: "event-head stack" },
-      h("a", { href: "#/", class: "small muted" }, "← All breakups"),
+      h("a", { href: "#/", class: "crumb" }, "← All breakups"),
       h("p", { class: "eyebrow" }, `${ev.regime} · ${ev.parent.name} · NORAD ${ev.parent.norad} · ${ev.parent.intdes || "—"}`),
       h("h1", {}, ev.title),
       h("p", { class: "lede" }, ev.blurb),
@@ -56,6 +57,7 @@ export async function render(root: HTMLElement, params: Record<string, string>):
 
   // ---------------------------------------------------------------- globe
   const shell = h("div", { class: "globe-shell", tabindex: "0", "aria-label": "3D globe of the debris cloud. Press space to play or pause." });
+  const addReticle = () => shell.appendChild(reticle({ inner: 372, crosshair: false }));
   const globeNote = h("p", { class: "small muted", style: "margin-top:10px" });
   wrap.append(h("section", { class: "section", style: "padding-bottom:16px" }, shell, globeNote));
   if (ev.ephem.available) {
@@ -64,6 +66,7 @@ export async function render(root: HTMLElement, params: Record<string, string>):
       .then(async ([meta, mod]) => {
         shell.replaceChildren();
         cleanups.push(await mod.mountDebrisPlayer(shell, id, meta, Number(params.stress) || 0));
+        addReticle();
         globeNote.textContent =
           (meta.reconstructed
             ? `First ${(meta.dense_until_s / 3600).toFixed(0)} hours: the cloud is reconstructed. Every fragment starts at the solved breakup point with its fitted Δv and is propagated with two-body + J2 dynamics. After that: SGP4 daily snapshots from catalogued element sets. `
@@ -197,7 +200,7 @@ function minutes(a: string, b: string): number {
 }
 
 function base2(w: number, hgt: number): Record<string, unknown> {
-  return { width: w, height: hgt, marginTop: 8, marginBottom: 32, marginRight: 16, style: { background: "transparent", color: "#b9bfca", fontSize: "12px" } };
+  return { width: w, height: hgt, marginTop: 8, marginBottom: 32, marginRight: 16, style: { background: "transparent", color: "#c9ccd3", fontFamily: "Jost, system-ui, sans-serif", fontSize: "12px" } };
 }
 
 // ===================================================================== solver curves

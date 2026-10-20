@@ -19,7 +19,7 @@ export function createGlobe(host: HTMLElement, opts: { autoRotate?: boolean; alt
     .globeImageUrl(`${BASE}textures/earth-blue-marble-2k.jpg`)
     .backgroundColor("rgba(0,0,0,0)")
     .showAtmosphere(true)
-    .atmosphereColor("#4f8fe0")
+    .atmosphereColor("#3f86c9")
     .atmosphereAltitude(0.16)
     .width(host.clientWidth)
     .height(host.clientHeight);

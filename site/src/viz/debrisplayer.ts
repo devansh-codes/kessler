@@ -13,8 +13,8 @@ export async function mountDebrisPlayer(shell: HTMLElement, eventId: string, met
   let meta = meta0;
   const host = h("div", { class: "globe-host" });
   const clock = h("div", { class: "clock", "aria-live": "off" }, "—");
-  const phase = h("div", { class: "badge", style: "pointer-events:none" }, "");
-  const count = h("div", { class: "small secondary", style: "background:rgba(10,12,16,.72);padding:4px 8px;border-radius:6px" }, "");
+  const phase = h("div", { class: "phase" }, "");
+  const count = h("div", { class: "small secondary" }, "");
   const hud = h("div", { class: "globe-hud" }, clock, phase, count);
   const nFrag = meta.N - 1;
   const legend = h(
@@ -24,7 +24,7 @@ export async function mountDebrisPlayer(shell: HTMLElement, eventId: string, met
     nFrag > 0 ? h("span", { class: "key" }, h("i", { style: `background:${FRAG}` }), `Fragments (${nFrag})`) : null,
     meta.breakup ? h("span", { class: "key" }, h("i", { class: "ring", style: `color:${FRAG}` }), "Breakup point") : null,
   );
-  const play = h("button", { class: "btn", type: "button", "aria-label": "Play" }, "▶ Play");
+  const play = h("button", { class: "btn primary", type: "button", "aria-label": "Play" }, "▶ Play");
   const slider = h("input", { type: "range", min: "0", max: String(meta.T - 1), step: "0.01", value: "0", "aria-label": "Timeline" }) as HTMLInputElement;
   const speed = h("button", { class: "btn", type: "button", title: "Playback speed" }, "1×");
   const timeline = h("div", { class: "timeline" }, play, slider, speed);

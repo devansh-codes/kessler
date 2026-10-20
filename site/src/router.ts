@@ -36,7 +36,7 @@ export async function navigate(root: HTMLElement): Promise<void> {
   const found = matchRoute(location.hash) ?? matchRoute("#/")!;
   if (typeof cleanup === "function") { try { cleanup(); } catch { /* ignore */ } }
   cleanup = undefined;
-  document.querySelectorAll<HTMLAnchorElement>(".nav a").forEach((a) => {
+  document.querySelectorAll<HTMLAnchorElement>(".nav a, .top-actions a").forEach((a) => {
     if (a.dataset.route === found.route.name || (found.route.name === "event" && a.dataset.route === "home")) a.setAttribute("aria-current", "page");
     else a.removeAttribute("aria-current");
   });
