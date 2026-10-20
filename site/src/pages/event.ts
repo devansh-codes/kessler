@@ -150,7 +150,7 @@ function disagreements(ev: EventSummary): HTMLElement {
       ...base2(w, 40 + rows.length * 30),
       marginLeft: Math.min(260, w * 0.42),
       x: { type: "utc", domain: [new Date(Math.min(...times.map(Number)) - pad), new Date(Math.max(...times.map(Number)) + pad)], grid: true, label: null },
-      y: { domain: rows.map((r) => r.source), label: null, tickFormat: (s: string) => (s.length > 38 ? s.slice(0, 36) + "…" : s) },
+      y: { domain: rows.map((r) => r.source), label: null, tickFormat: (s: string) => { const max = Math.max(14, Math.floor(Math.min(260, w * 0.42) / 6.6)); return s.length > max ? s.slice(0, max - 1) + "…" : s; } },
       marks: [
         sol?.t_p05 && sol?.t_p95 ? Plot.ruleY([rows[0].source], { x1: new Date(sol.t_p05), x2: new Date(sol.t_p95), stroke: C.frag, strokeWidth: 6, strokeOpacity: 0.35, strokeLinecap: "round" }) : null,
         sol?.t_p50 ? Plot.ruleX([new Date(sol.t_p50)], { stroke: C.frag, strokeOpacity: 0.5, strokeDasharray: "2,3" }) : null,
