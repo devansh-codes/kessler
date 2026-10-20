@@ -454,12 +454,20 @@ def run_build(warehouse: Path, build_dir: Path) -> None:
     console.print(f"[green]build complete[/green] → {build_dir}")
 
 
+TS_COLS = {"t_p05", "t_p50", "t_p95", "computed_at", "first_epoch", "epoch", "snapshot", "issued_at", "p10", "p50", "p90", "baseline"}
+
+
 def _write_table(d: Path, name: str, df: pd.DataFrame) -> None:
+    """Derived tables store naive UTC timestamps: DuckDB-WASM ships without ICU, which time-zone-aware
+    columns need for casts like ``ts::DATE``. All times are UTC."""
+    df = df.copy()
     for c in df.columns:
         if df[c].dtype == object:
             sample = df[c].dropna()
-            if len(sample) and isinstance(sample.iloc[0], pd.Timestamp):
-                df[c] = pd.to_datetime(df[c], utc=True)
+            if len(sample) and isinstance(sample.iloc[0], pd.Timestamp | str) and c in TS_COLS:
+                df[c] = pd.to_datetime(df[c], utc=True, format="ISO8601")
+        if isinstance(df[c].dtype, pd.DatetimeTZDtype):
+            df[c] = df[c].dt.tz_convert("UTC").dt.tz_localize(None)
     df.to_parquet(d / f"{name}.parquet", index=False, compression="zstd")
 
 

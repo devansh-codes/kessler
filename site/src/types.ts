@@ -168,17 +168,21 @@ export interface ForecastRow {
   p50: string;
   p90: string;
   baseline: string | null;
+  model_version: string;
 }
 
 export interface Backtest {
   generated_at: string;
   n_train: number;
+  n_calibration?: number;
   n_holdout: number;
-  holdout_start: string;
+  objects?: number;
+  holdout_start?: string;
   metrics: { model: string; mae_days: number; mae_pct: number; coverage80: number; median_lead_days: number | null; skill_vs_baseline: number | null }[];
   calibration: { nominal: number; empirical: number; model: string }[];
-  lead_time: { days_before: number; coverage: number; model: string }[];
-  scored_live: { norad: number; issued_at: string; p50: string; actual: string; abs_err_days: number; inside80: boolean }[];
+  lead_time: { days_before: number; coverage: number; model: string; n: number; mae_days: number; baseline_mae_days: number }[];
+  scored_live: { norad: number; name: string; issued_at: string; p50: string; actual: string; abs_err_days: number; inside80: boolean; lead_days: number; model_version: string }[];
+  live_summary?: { n: number; mae_days: number; coverage80: number };
   feature_importance?: { feature: string; importance: number }[];
   notes: string[];
 }
@@ -200,4 +204,4 @@ export interface ScorecardRow {
   median_days_to_first_debris: number | null;
   highlight: boolean;
 }
-export interface Scorecard { gcat_release: string; citation: string; since_year: number; rows: ScorecardRow[]; events: { parent: string; name: string; family: string; date: string; pieces: number }[] }
+export interface Scorecard { gcat_release: string; citation: string; since_year: number; frag_min: number; rows: ScorecardRow[]; rows_recent: ScorecardRow[]; events: { parent: string; name: string; family: string; date: string | null; pieces: number; launch_tag: string }[] }

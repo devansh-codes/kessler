@@ -25,6 +25,7 @@ def _routes(status: int = 200):
         "satcat100k.tsv": (200, fixture_text("gcat_satcat100k_sample.tsv")),
         "cat/satcat.tsv": (200, fixture_text("gcat_satcat_sample.tsv")),
         "launch.tsv": (200, fixture_text("gcat_launch_sample.tsv")),
+        "gcat/index.html": (200, "<html>GCAT Release 1.8.8</html>"),
     }
 
 

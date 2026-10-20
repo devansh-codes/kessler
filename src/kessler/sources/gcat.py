@@ -109,7 +109,9 @@ def fetch(client: PoliteClient):
     ob, _ = parse_objects(b.text)
     objects = pd.concat([oa, ob], ignore_index=True).drop_duplicates("jcat", keep="last")
     launches, _ = parse_launches(c.text)
-    release = f"GCAT (updated {upd})" if upd else "GCAT"
+    idx = client.get(f"{BASE}/index.html", ttl_s=WEEK_S)
+    m = re.search(r"[Rr]elease\s*([0-9]+\.[0-9]+\.[0-9]+)", idx.text)
+    release = m.group(1) if m else (f"updated {upd}" if upd else "unknown")
     objects["gcat_release"] = release
     launches["gcat_release"] = release
     return objects, launches, release
