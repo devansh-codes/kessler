@@ -1,0 +1,181 @@
+{
+ "backfill_done": [
+  "1993-036",
+  "1999-025",
+  "2024-140",
+  "2022-151",
+  "2000-055",
+  "1997-051",
+  "1995-015",
+  "2002-032"
+ ],
+ "backfill_remaining": 360,
+ "backfill_requests": {
+  "2026-10-20": 16
+ },
+ "gcat_release": "GCAT (updated 2026 Oct 17 1832:50)",
+ "last_run": {
+  "network_calls": 0,
+  "rows_new": {},
+  "run_id": "20261020T032926Z-7c9c02",
+  "started_at": "2026-10-20T03:29:26+00:00",
+  "status": "ok",
+  "tasks": [
+   {
+    "status": "skipped (not due)",
+    "task": "gp_current:1988-078"
+   },
+   {
+    "status": "skipped (not due)",
+    "task": "gp_first:1988-078"
+   },
+   {
+    "status": "skipped (not due)",
+    "task": "satcat:1988-078"
+   },
+   {
+    "status": "skipped (not due)",
+    "task": "gp_current:1981-043"
+   },
+   {
+    "status": "skipped (not due)",
+    "task": "gp_first:1981-043"
+   },
+   {
+    "status": "skipped (not due)",
+    "task": "satcat:1981-043"
+   },
+   {
+    "status": "skipped (not due)",
+    "task": "gp_current:2025-112"
+   },
+   {
+    "status": "skipped (not due)",
+    "task": "gp_first:2025-112"
+   },
+   {
+    "status": "skipped (not due)",
+    "task": "satcat:2025-112"
+   },
+   {
+    "status": "skipped (not due)",
+    "task": "gp_current:2026-195"
+   },
+   {
+    "status": "skipped (not due)",
+    "task": "gp_first:2026-195"
+   },
+   {
+    "status": "skipped (not due)",
+    "task": "satcat:2026-195"
+   },
+   {
+    "status": "skipped (not due)",
+    "task": "gp_current:2025-271"
+   },
+   {
+    "status": "skipped (not due)",
+    "task": "gp_first:2025-271"
+   },
+   {
+    "status": "skipped (not due)",
+    "task": "satcat:2025-271"
+   },
+   {
+    "status": "skipped (not due)",
+    "task": "gp_current:2014-058"
+   },
+   {
+    "status": "skipped (not due)",
+    "task": "gp_first:2014-058"
+   },
+   {
+    "status": "skipped (not due)",
+    "task": "satcat:2014-058"
+   },
+   {
+    "status": "skipped (not due)",
+    "task": "gp_decaying"
+   },
+   {
+    "status": "skipped (not due)",
+    "task": "satcat_full"
+   },
+   {
+    "status": "skipped (not due)",
+    "task": "space_weather"
+   },
+   {
+    "status": "skipped (not due)",
+    "task": "reentry_backfill"
+   },
+   {
+    "status": "skipped (not due)",
+    "task": "swpc"
+   },
+   {
+    "status": "skipped (not due)",
+    "task": "gcat"
+   }
+  ]
+ },
+ "last_success": {
+  "gcat": "2026-10-20T03:28:47+00:00",
+  "gp_current:1981-043": "2026-10-20T03:28:47+00:00",
+  "gp_current:1988-078": "2026-10-20T03:28:47+00:00",
+  "gp_current:2014-058": "2026-10-20T03:28:47+00:00",
+  "gp_current:2025-112": "2026-10-20T03:28:47+00:00",
+  "gp_current:2025-271": "2026-10-20T03:28:47+00:00",
+  "gp_current:2026-195": "2026-10-20T03:28:47+00:00",
+  "gp_decaying": "2026-10-20T03:28:47+00:00",
+  "gp_first:1981-043": "2026-10-20T03:28:47+00:00",
+  "gp_first:1988-078": "2026-10-20T03:28:47+00:00",
+  "gp_first:2014-058": "2026-10-20T03:28:47+00:00",
+  "gp_first:2025-112": "2026-10-20T03:28:47+00:00",
+  "gp_first:2025-271": "2026-10-20T03:28:47+00:00",
+  "gp_first:2026-195": "2026-10-20T03:28:47+00:00",
+  "reentry_backfill": "2026-10-20T03:29:08+00:00",
+  "satcat:1981-043": "2026-10-20T03:28:47+00:00",
+  "satcat:1988-078": "2026-10-20T03:28:47+00:00",
+  "satcat:2014-058": "2026-10-20T03:28:47+00:00",
+  "satcat:2025-112": "2026-10-20T03:28:47+00:00",
+  "satcat:2025-271": "2026-10-20T03:28:47+00:00",
+  "satcat:2026-195": "2026-10-20T03:28:47+00:00",
+  "satcat_full": "2026-10-20T03:28:47+00:00",
+  "space_weather": "2026-10-20T03:28:47+00:00",
+  "swpc": "2026-10-20T03:28:47+00:00"
+ },
+ "runs": [
+  {
+   "network_calls": 15,
+   "rows_new": {
+    "f107_live": 123,
+    "gcat_launches": 76005,
+    "gcat_objects": 71091,
+    "gp_elements": 13897,
+    "kp_live": 57,
+    "satcat": 71088,
+    "space_weather": 25444
+   },
+   "run_id": "20261020T032847Z-5a125d",
+   "started_at": "2026-10-20T03:28:47+00:00",
+   "status": "ok"
+  },
+  {
+   "network_calls": 8,
+   "rows_new": {
+    "gp_elements": 2959
+   },
+   "run_id": "20261020T032908Z-74eea0",
+   "started_at": "2026-10-20T03:29:08+00:00",
+   "status": "ok"
+  },
+  {
+   "network_calls": 0,
+   "rows_new": {},
+   "run_id": "20261020T032926Z-7c9c02",
+   "started_at": "2026-10-20T03:29:26+00:00",
+   "status": "ok"
+  }
+ ]
+}
