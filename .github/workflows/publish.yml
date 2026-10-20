@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v7
       - uses: actions/checkout@v7
         with: { ref: data, path: warehouse_repo }
-      - uses: astral-sh/setup-uv@v10
+      - uses: astral-sh/setup-uv@v10.3.0
         with: { enable-cache: true }
       - run: uv sync --frozen
       - run: uv run kessler build  --warehouse warehouse_repo/warehouse

@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v7                       # main (code)
       - uses: actions/checkout@v7
         with: { ref: data, path: warehouse_repo }
-      - uses: astral-sh/setup-uv@v10
+      - uses: astral-sh/setup-uv@v10.3.0
         with: { enable-cache: true }
       - run: uv sync --frozen
       # The HTTP cache makes re-runs free: always restore the most recent cache, save a new one.

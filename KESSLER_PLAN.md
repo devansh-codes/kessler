@@ -116,5 +116,5 @@ Recorded HTTP fixtures only (live smoke test opt-in), golden SGP4 vectors, synth
 | Etiquette | Confirmed: GP checked every 2 h; 50 errors / 2 h → firewall; repeat requests before update return 403. |
 | SW CSV columns | DATE, BSRN, ND, KP1–KP8, KP_SUM, AP1–AP8, AP_AVG, CP, C9, ISN, F10.7_OBS, F10.7_ADJ, F10.7_DATA_TYPE, F10.7_OBS_CENTER81, F10.7_OBS_LAST81, F10.7_ADJ_CENTER81, F10.7_ADJ_LAST81. |
 | GCAT object columns | JCAT, Satcat, Launch_Tag, Piece, Type (P/R/C/D prefix), Name, PLName, LDate, Parent, SDate, Primary, DDate, Status, Dest, Owner, State, …, Perigee, PF, Apogee, AF, Inc, IF, OpOrbit, OQUAL, AltNames. Debris origin is encoded in Name ("X deb"). |
-| Actions versions | checkout v7, setup-node v7, configure-pages v6, upload-pages-artifact v5, deploy-pages v5, cache v6, astral-sh/setup-uv v10. |
+| Actions versions | checkout v7, setup-node v7, configure-pages v6, upload-pages-artifact v5, deploy-pages v5, cache v6, astral-sh/setup-uv v10.3.0 (no floating major tag is published for setup-uv v10; pin the exact version). |
 | npm | vite 8.3, @duckdb/duckdb-wasm 1.33.1-dev57 (latest tag), globe.gl 2.46, three 0.186, @observablehq/plot 0.6.17, vitest 5. |
