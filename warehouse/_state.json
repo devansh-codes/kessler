@@ -13,7 +13,7 @@
  "backfill_requests": {
   "2026-10-20": 16
  },
- "gcat_release": "GCAT (updated 2026 Oct 17 1832:50)",
+ "gcat_release": "1.8.8",
  "last_run": {
   "network_calls": 6,
   "rows_new": {
