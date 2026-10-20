@@ -14,6 +14,19 @@ from kessler.export.manifest import build_manifest
 console = Console(stderr=True)
 
 
+SQL_TABLES = [
+    "events",
+    "breakup_solutions",
+    "event_fragments",
+    "fragment_dv",
+    "gabbard_points",
+    "reentry_forecasts",
+    "reentry_backtest",
+    "decayed_objects",
+    "scorecard",
+]
+
+
 class BudgetExceeded(RuntimeError):
     pass
 
@@ -48,6 +61,14 @@ def run_export(warehouse: Path, build_dir: Path, out: Path) -> None:
     site_src = build_dir / "site"
     if site_src.exists():
         shutil.copytree(site_src, out, dirs_exist_ok=True)
+    # curated derived tables for the in-browser SQL Lab (DuckDB-WASM, same origin)
+    tables = build_dir / "tables"
+    if tables.exists():
+        (out / "sql").mkdir(exist_ok=True)
+        for name in SQL_TABLES:
+            src = tables / f"{name}.parquet"
+            if src.exists():
+                shutil.copy2(src, out / "sql" / src.name)
     check_budgets(out)
     write_json(out / "manifest.json", build_manifest(warehouse, out))
     console.print(f"exported to {out}")

@@ -142,6 +142,12 @@ def run_ingest(
             lambda d=d: put("gp_elements", celestrak_gp.fetch(ct, "INTDES", d, "first")[0]),
         )
         task(
+            f"gp_last:{d}",
+            ct,
+            cad["event_gp_first"],
+            lambda d=d: put("gp_elements", celestrak_gp.fetch(ct, "INTDES", d, "last")[0]),
+        )
+        task(
             f"satcat:{d}",
             ct,
             cad["event_satcat"],

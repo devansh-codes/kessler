@@ -21,7 +21,7 @@ forensics:
   bootstrap: 500
   low_confidence_spread_km: 200
   min_fragments: 3
-  dbscan_eps: 0.5
+  dbscan_eps_deg: 3.0          # max angle between orbit planes (deg) for DBSCAN neighbours
   dbscan_min_samples: 2
 export:
   ephem_max_bytes: 15000000

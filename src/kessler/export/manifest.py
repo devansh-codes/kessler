@@ -19,7 +19,7 @@ SOURCES = [
         "label": "CelesTrak GP (OMM element sets)",
         "url": "https://celestrak.org/NORAD/elements/",
         "license": "CelesTrak (Dr. T.S. Kelso), sourced from 18 SDS / Space-Track. No redistribution of raw element sets.",
-        "tasks": ["gp_current", "gp_first", "gp_decaying", "reentry_backfill"],
+        "tasks": ["gp_current", "gp_first", "gp_last", "gp_decaying", "reentry_backfill"],
     },
     {
         "id": "celestrak_satcat",

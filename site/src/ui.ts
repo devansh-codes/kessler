@@ -76,6 +76,8 @@ export const FLAG_TEXT: Record<string, { label: string; level: "good" | "warning
   LONG_BACKPROP: { label: "Long back-propagation", level: "warning", help: "Fragments were catalogued weeks after the event; SGP4 error grows with time." },
   INSUFFICIENT_HISTORY: { label: "Insufficient history", level: "warning", help: "Not enough element sets bracket the event yet. Accuracy improves as snapshots accumulate." },
   STRETCH: { label: "Stretch case", level: "info", help: "Deep-space event; experimental." },
+  MULTIMODAL: { label: "Several revolutions fit", level: "warning", help: "Bootstrap resamples pick different orbital revolutions; the interval spans more than one orbit." },
+  PROPAGATION_FAILED: { label: "Propagation failed", level: "critical", help: "SGP4 could not propagate the element sets over the search window." },
   OUTLIERS: { label: "Outliers removed", level: "info", help: "Fragments whose closest approach exceeded 3× the median were excluded." },
 };
 

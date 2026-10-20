@@ -58,11 +58,11 @@ export async function render(root: HTMLElement): Promise<() => void> {
   if (events.length) {
     const main = events.filter((e) => !e.stretch);
     const totalFrags = main.reduce((s, e) => s + e.n_fragments, 0);
-    const validated = main.filter((e) => e.validation?.within_precision).length;
+    const solved = main.filter((e) => e.mode === "fragments").length;
     kpis.replaceChildren(
       kpi("Events tracked", String(main.length)),
       kpi("Fragments analysed", fmtNum(totalFrags)),
-      kpi("Within reported window", `${validated} of ${main.filter((e) => e.validation?.delta_min != null).length}`),
+      kpi("Solved from fragments", `${solved} of ${main.length}`),
     );
     board.replaceChildren(...events.map(card));
   }
@@ -85,14 +85,13 @@ async function loadBreakupMarkers(globe: import("globe.gl").GlobeInstance): Prom
   const evs = await api.events();
   const summaries = await Promise.all(evs.map((e) => api.event(e.id).catch(() => null)));
   const rings = summaries
-    .filter((s): s is NonNullable<typeof s> => !!s && s.solution?.lat != null && s.solution?.lon != null)
+    .filter((s): s is NonNullable<typeof s> => !!s && s.regime !== "GEO" && s.solution?.lat != null && s.solution?.lon != null)
     .map((s) => ({ lat: s.solution!.lat!, lng: s.solution!.lon!, alt: (s.solution!.alt_km ?? 500) / 6371, title: s.title }));
   globe
     .ringsData(rings)
     .ringLat("lat").ringLng("lng").ringAltitude("alt")
     .ringColor(() => (t: number) => `rgba(217,89,38,${1 - t})`)
-    .ringMaxRadius(6).ringPropagationSpeed(2).ringRepeatPeriod(1600)
-    .pointsData(rings).pointLat("lat").pointLng("lng").pointAltitude("alt").pointRadius(0.7).pointColor(() => "#d95926").pointLabel("title");
+    .ringMaxRadius(6).ringPropagationSpeed(2).ringRepeatPeriod(1600);
 }
 
 function kpi(k: string, v: string): HTMLElement {
@@ -107,7 +106,7 @@ function card(e: EventIndexEntry): HTMLElement {
     const ok = v.within_precision;
     badge = h("span", { class: `badge ${ok ? "good" : "serious"}`, title: `Ours minus ${v.ref_label}` }, h("span", { class: "dot" }), `${fmtMinutes(v.delta_min)} vs reported`);
   } else badge = h("span", { class: "badge" }, h("span", { class: "dot" }), "Unvalidated");
-  const ci = e.t_p05 && e.t_p95 ? `90% CI ${fmtMinutes((new Date(e.t_p05).getTime() - new Date(e.t_p50!).getTime()) / 60000)} / ${fmtMinutes((new Date(e.t_p95).getTime() - new Date(e.t_p50!).getTime()) / 60000)}` : "";
+  const ci = e.t_p05 && e.t_p95 && e.n_fragments > 1 ? `90% CI ${fmtMinutes((new Date(e.t_p05).getTime() - new Date(e.t_p50!).getTime()) / 60000)} / ${fmtMinutes((new Date(e.t_p95).getTime() - new Date(e.t_p50!).getTime()) / 60000)}` : "";
   return h(
     "a",
     { class: "ecard", href: `#/event/${e.id}` },
@@ -140,8 +139,10 @@ function sparkline(e: EventIndexEntry): SVGElement {
   }
   const xs = pts.map((p) => p.period), ys = pts.flatMap((p) => [p.apo, p.peri]);
   const x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys);
-  const sx = (v: number) => P + ((v - x0) / (x1 - x0 || 1)) * (W - 2 * P);
-  const sy = (v: number) => H - P - ((v - y0) / (y1 - y0 || 1)) * (H - 2 * P);
+  const xr = Math.max(x1 - x0, 0.5), yr = Math.max(y1 - y0, 40);
+  const xm = (x0 + x1) / 2, ym = (y0 + y1) / 2;
+  const sx = (v: number) => W / 2 + ((v - xm) / xr) * (W - 4 * P) * 0.92;
+  const sy = (v: number) => H / 2 - ((v - ym) / yr) * (H - 4 * P);
   for (const p of pts) {
     const color = p.parent ? "var(--series-1)" : "var(--series-2)";
     svg.appendChild(svgEl("circle", { cx: sx(p.period), cy: sy(p.apo), r: p.parent ? 4 : 2.6, fill: color, opacity: p.parent ? 1 : 0.9 }));

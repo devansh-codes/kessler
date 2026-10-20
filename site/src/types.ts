@@ -91,8 +91,11 @@ export interface Solution {
   alt_km: number | null;
   arg_lat_deg: number | null;
   flags: Flag[];
-  curve?: { t: string; spread_km: number }[];
-  sensitivity?: { label: string; t: string | null; spread_km: number | null }[];
+  curve?: { t: string; spread_km: number | null; cross_km: number | null }[];
+  sensitivity?: { label: string; t: string | null; spread_km: number | null; delta_min?: number }[];
+  crossings?: { t: string; km: number | null }[];
+  used_norads?: number[];
+  excluded?: Record<string, string>;
 }
 
 export interface EventSummary {
@@ -125,13 +128,16 @@ export interface EventSummary {
   };
   dv_stats: { n: number; median_ms: number; p90_ms: number; max_ms: number; lognorm_mu: number; lognorm_sigma: number } | null;
   fragments: { norad: number; name: string; first_epoch: string; decay_date: string | null; assignment: string; dv_ms: number | null; apogee_km: number | null; perigee_km: number | null; forecast_p50: string | null }[];
-  decay_curve: { date: string; remaining: number; p10?: number; p50?: number; p90?: number; forecast?: boolean }[];
-  ephem: { available: boolean; reason?: string };
+  decay_curve: { date: string; remaining: number; catalogued: number }[];
+  ephem: { available: boolean; reason?: string; reconstructed?: number; t0_kind?: string };
+  flags: Flag[];
+  stretch: boolean;
   computed_at: string;
+  solver_version: string;
 }
 
 export interface GabbardRow { norad: number; epoch: string; period: number; apo: number; peri: number; parent: boolean; snapshot: string }
-export interface DvRow { norad: number; r: number; t: number; n: number; mag: number; residual_km: number }
+export interface DvRow { norad: number; r: number; t: number; n: number; mag: number; residual_km: number | null; used?: boolean; reliable?: boolean }
 
 export interface EphemMeta {
   t0: string;
@@ -144,6 +150,9 @@ export interface EphemMeta {
   parent_index: number;
   decay_s: (number | null)[]; // seconds since t0 when each object decayed, if known
   breakup: { lat: number; lon: number; alt_km: number } | null;
+  dense_until_s: number;
+  reconstructed: number;
+  t0_kind: "solution" | "reference";
 }
 
 export interface ForecastRow {
