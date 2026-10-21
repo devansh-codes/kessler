@@ -15,160 +15,229 @@
   "2001-049",
   "1982-092",
   "1970-025",
-  "1981-053"
+  "1981-053",
+  "1991-082",
+  "2010-041",
+  "1994-029",
+  "1979-095"
  ],
- "backfill_remaining": 352,
+ "backfill_remaining": 348,
  "backfill_requests": {
-  "2026-10-20": 32
+  "2026-10-21": 8
  },
  "gcat_release": "1.8.8",
  "last_run": {
-  "network_calls": 9,
+  "network_calls": 37,
   "rows_new": {
-   "f107_live": 2,
-   "gp_elements": 7,
-   "kp_live": 2
+   "f107_live": 1,
+   "gp_elements": 2075,
+   "kp_live": 2,
+   "satcat": 7,
+   "space_weather": 1
   },
-  "run_id": "20261020T214536Z-a73eed",
-  "started_at": "2026-10-20T21:45:36+00:00",
+  "run_id": "20261021T050413Z-79d0ef",
+  "started_at": "2026-10-21T05:04:13+00:00",
   "status": "ok",
   "tasks": [
-   {
-    "rows_new": {
-     "gp_elements": 0
-    },
-    "status": "ok",
-    "task": "gp_current:1988-078"
-   },
-   {
-    "status": "skipped (not due)",
-    "task": "gp_first:1988-078"
-   },
-   {
-    "status": "skipped (not due)",
-    "task": "gp_last:1988-078"
-   },
-   {
-    "status": "skipped (not due)",
-    "task": "satcat:1988-078"
-   },
-   {
-    "rows_new": {
-     "gp_elements": 0
-    },
-    "status": "ok",
-    "task": "gp_current:1981-043"
-   },
-   {
-    "status": "skipped (not due)",
-    "task": "gp_first:1981-043"
-   },
-   {
-    "status": "skipped (not due)",
-    "task": "gp_last:1981-043"
-   },
-   {
-    "status": "skipped (not due)",
-    "task": "satcat:1981-043"
-   },
-   {
-    "rows_new": {
-     "gp_elements": 0
-    },
-    "status": "ok",
-    "task": "gp_current:2025-112"
-   },
-   {
-    "status": "skipped (not due)",
-    "task": "gp_first:2025-112"
-   },
-   {
-    "status": "skipped (not due)",
-    "task": "gp_last:2025-112"
-   },
-   {
-    "status": "skipped (not due)",
-    "task": "satcat:2025-112"
-   },
-   {
-    "rows_new": {
-     "gp_elements": 0
-    },
-    "status": "ok",
-    "task": "gp_current:2026-195"
-   },
-   {
-    "status": "skipped (not due)",
-    "task": "gp_first:2026-195"
-   },
-   {
-    "status": "skipped (not due)",
-    "task": "gp_last:2026-195"
-   },
-   {
-    "status": "skipped (not due)",
-    "task": "satcat:2026-195"
-   },
-   {
-    "rows_new": {
-     "gp_elements": 0
-    },
-    "status": "ok",
-    "task": "gp_current:2025-271"
-   },
-   {
-    "status": "skipped (not due)",
-    "task": "gp_first:2025-271"
-   },
-   {
-    "status": "skipped (not due)",
-    "task": "gp_last:2025-271"
-   },
-   {
-    "status": "skipped (not due)",
-    "task": "satcat:2025-271"
-   },
-   {
-    "rows_new": {
-     "gp_elements": 0
-    },
-    "status": "ok",
-    "task": "gp_current:2014-058"
-   },
-   {
-    "status": "skipped (not due)",
-    "task": "gp_first:2014-058"
-   },
-   {
-    "status": "skipped (not due)",
-    "task": "gp_last:2014-058"
-   },
-   {
-    "status": "skipped (not due)",
-    "task": "satcat:2014-058"
-   },
    {
     "rows_new": {
      "gp_elements": 7
     },
     "status": "ok",
+    "task": "gp_current:1988-078"
+   },
+   {
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
+    "task": "gp_first:1988-078"
+   },
+   {
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
+    "task": "gp_last:1988-078"
+   },
+   {
+    "rows_new": {
+     "satcat": 0
+    },
+    "status": "ok",
+    "task": "satcat:1988-078"
+   },
+   {
+    "rows_new": {
+     "gp_elements": 3
+    },
+    "status": "ok",
+    "task": "gp_current:1981-043"
+   },
+   {
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
+    "task": "gp_first:1981-043"
+   },
+   {
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
+    "task": "gp_last:1981-043"
+   },
+   {
+    "rows_new": {
+     "satcat": 0
+    },
+    "status": "ok",
+    "task": "satcat:1981-043"
+   },
+   {
+    "rows_new": {
+     "gp_elements": 24
+    },
+    "status": "ok",
+    "task": "gp_current:2025-112"
+   },
+   {
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
+    "task": "gp_first:2025-112"
+   },
+   {
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
+    "task": "gp_last:2025-112"
+   },
+   {
+    "rows_new": {
+     "satcat": 0
+    },
+    "status": "ok",
+    "task": "satcat:2025-112"
+   },
+   {
+    "rows_new": {
+     "gp_elements": 8
+    },
+    "status": "ok",
+    "task": "gp_current:2026-195"
+   },
+   {
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
+    "task": "gp_first:2026-195"
+   },
+   {
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
+    "task": "gp_last:2026-195"
+   },
+   {
+    "rows_new": {
+     "satcat": 0
+    },
+    "status": "ok",
+    "task": "satcat:2026-195"
+   },
+   {
+    "rows_new": {
+     "gp_elements": 26
+    },
+    "status": "ok",
+    "task": "gp_current:2025-271"
+   },
+   {
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
+    "task": "gp_first:2025-271"
+   },
+   {
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
+    "task": "gp_last:2025-271"
+   },
+   {
+    "rows_new": {
+     "satcat": 0
+    },
+    "status": "ok",
+    "task": "satcat:2025-271"
+   },
+   {
+    "rows_new": {
+     "gp_elements": 1
+    },
+    "status": "ok",
+    "task": "gp_current:2014-058"
+   },
+   {
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
+    "task": "gp_first:2014-058"
+   },
+   {
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
+    "task": "gp_last:2014-058"
+   },
+   {
+    "rows_new": {
+     "satcat": 0
+    },
+    "status": "ok",
+    "task": "satcat:2014-058"
+   },
+   {
+    "rows_new": {
+     "gp_elements": 70
+    },
+    "status": "ok",
     "task": "gp_decaying"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "satcat": 7
+    },
+    "status": "ok",
     "task": "satcat_full"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "space_weather": 1
+    },
+    "status": "ok",
     "task": "space_weather"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 1936
+    },
+    "status": "ok",
     "task": "reentry_backfill"
    },
    {
     "rows_new": {
-     "f107_live": 2,
+     "f107_live": 1,
      "kp_live": 2
     },
     "status": "ok",
@@ -182,35 +251,35 @@
  },
  "last_success": {
   "gcat": "2026-10-20T03:28:47+00:00",
-  "gp_current:1981-043": "2026-10-20T21:45:36+00:00",
-  "gp_current:1988-078": "2026-10-20T21:45:36+00:00",
-  "gp_current:2014-058": "2026-10-20T21:45:36+00:00",
-  "gp_current:2025-112": "2026-10-20T21:45:36+00:00",
-  "gp_current:2025-271": "2026-10-20T21:45:36+00:00",
-  "gp_current:2026-195": "2026-10-20T21:45:36+00:00",
-  "gp_decaying": "2026-10-20T21:45:36+00:00",
-  "gp_first:1981-043": "2026-10-20T03:28:47+00:00",
-  "gp_first:1988-078": "2026-10-20T03:28:47+00:00",
-  "gp_first:2014-058": "2026-10-20T03:28:47+00:00",
-  "gp_first:2025-112": "2026-10-20T03:28:47+00:00",
-  "gp_first:2025-271": "2026-10-20T03:28:47+00:00",
-  "gp_first:2026-195": "2026-10-20T03:28:47+00:00",
-  "gp_last:1981-043": "2026-10-20T04:00:27+00:00",
-  "gp_last:1988-078": "2026-10-20T04:00:27+00:00",
-  "gp_last:2014-058": "2026-10-20T04:00:27+00:00",
-  "gp_last:2025-112": "2026-10-20T04:00:27+00:00",
-  "gp_last:2025-271": "2026-10-20T04:00:27+00:00",
-  "gp_last:2026-195": "2026-10-20T04:00:27+00:00",
-  "reentry_backfill": "2026-10-20T17:23:14+00:00",
-  "satcat:1981-043": "2026-10-20T03:28:47+00:00",
-  "satcat:1988-078": "2026-10-20T03:28:47+00:00",
-  "satcat:2014-058": "2026-10-20T03:28:47+00:00",
-  "satcat:2025-112": "2026-10-20T03:28:47+00:00",
-  "satcat:2025-271": "2026-10-20T03:28:47+00:00",
-  "satcat:2026-195": "2026-10-20T03:28:47+00:00",
-  "satcat_full": "2026-10-20T03:28:47+00:00",
-  "space_weather": "2026-10-20T03:28:47+00:00",
-  "swpc": "2026-10-20T21:45:36+00:00"
+  "gp_current:1981-043": "2026-10-21T05:04:13+00:00",
+  "gp_current:1988-078": "2026-10-21T05:04:13+00:00",
+  "gp_current:2014-058": "2026-10-21T05:04:13+00:00",
+  "gp_current:2025-112": "2026-10-21T05:04:13+00:00",
+  "gp_current:2025-271": "2026-10-21T05:04:13+00:00",
+  "gp_current:2026-195": "2026-10-21T05:04:13+00:00",
+  "gp_decaying": "2026-10-21T05:04:13+00:00",
+  "gp_first:1981-043": "2026-10-21T05:04:13+00:00",
+  "gp_first:1988-078": "2026-10-21T05:04:13+00:00",
+  "gp_first:2014-058": "2026-10-21T05:04:13+00:00",
+  "gp_first:2025-112": "2026-10-21T05:04:13+00:00",
+  "gp_first:2025-271": "2026-10-21T05:04:13+00:00",
+  "gp_first:2026-195": "2026-10-21T05:04:13+00:00",
+  "gp_last:1981-043": "2026-10-21T05:04:13+00:00",
+  "gp_last:1988-078": "2026-10-21T05:04:13+00:00",
+  "gp_last:2014-058": "2026-10-21T05:04:13+00:00",
+  "gp_last:2025-112": "2026-10-21T05:04:13+00:00",
+  "gp_last:2025-271": "2026-10-21T05:04:13+00:00",
+  "gp_last:2026-195": "2026-10-21T05:04:13+00:00",
+  "reentry_backfill": "2026-10-21T05:04:13+00:00",
+  "satcat:1981-043": "2026-10-21T05:04:13+00:00",
+  "satcat:1988-078": "2026-10-21T05:04:13+00:00",
+  "satcat:2014-058": "2026-10-21T05:04:13+00:00",
+  "satcat:2025-112": "2026-10-21T05:04:13+00:00",
+  "satcat:2025-271": "2026-10-21T05:04:13+00:00",
+  "satcat:2026-195": "2026-10-21T05:04:13+00:00",
+  "satcat_full": "2026-10-21T05:04:13+00:00",
+  "space_weather": "2026-10-21T05:04:13+00:00",
+  "swpc": "2026-10-21T05:04:13+00:00"
  },
  "runs": [
   {
@@ -291,6 +360,19 @@
    },
    "run_id": "20261020T214536Z-a73eed",
    "started_at": "2026-10-20T21:45:36+00:00",
+   "status": "ok"
+  },
+  {
+   "network_calls": 37,
+   "rows_new": {
+    "f107_live": 1,
+    "gp_elements": 2075,
+    "kp_live": 2,
+    "satcat": 7,
+    "space_weather": 1
+   },
+   "run_id": "20261021T050413Z-79d0ef",
+   "started_at": "2026-10-21T05:04:13+00:00",
    "status": "ok"
   }
  ]
