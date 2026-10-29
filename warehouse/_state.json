@@ -85,148 +85,208 @@
   "2025-252"
  ],
  "backfill_remaining": 288,
- "backfill_requests": {
-  "2026-10-28": 4
- },
+ "backfill_requests": {},
  "gcat_release": "1.8.8",
  "last_run": {
-  "network_calls": 10,
+  "network_calls": 30,
   "rows_new": {
-   "f107_live": 2,
-   "gp_elements": 172,
-   "kp_live": 3
+   "f107_live": 1,
+   "gp_elements": 11,
+   "kp_live": 3,
+   "satcat": 6,
+   "space_weather": 2
   },
-  "run_id": "20261028T224337Z-1940cf",
-  "started_at": "2026-10-28T22:43:37+00:00",
+  "run_id": "20261029T060511Z-4098d8",
+  "started_at": "2026-10-29T06:05:11+00:00",
   "status": "partial",
   "tasks": [
    {
     "rows_new": {
-     "gp_elements": 15
+     "gp_elements": 0
     },
     "status": "ok",
     "task": "gp_current:1988-078"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
     "task": "gp_first:1988-078"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
     "task": "gp_last:1988-078"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "satcat": 0
+    },
+    "status": "ok",
     "task": "satcat:1988-078"
    },
    {
     "rows_new": {
-     "gp_elements": 10
+     "gp_elements": 0
     },
     "status": "ok",
     "task": "gp_current:1981-043"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
     "task": "gp_first:1981-043"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
     "task": "gp_last:1981-043"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "satcat": 0
+    },
+    "status": "ok",
     "task": "satcat:1981-043"
    },
    {
     "rows_new": {
-     "gp_elements": 24
+     "gp_elements": 0
     },
     "status": "ok",
     "task": "gp_current:2025-112"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
     "task": "gp_first:2025-112"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
     "task": "gp_last:2025-112"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "satcat": 0
+    },
+    "status": "ok",
     "task": "satcat:2025-112"
    },
    {
     "rows_new": {
-     "gp_elements": 8
+     "gp_elements": 0
     },
     "status": "ok",
     "task": "gp_current:2026-195"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
     "task": "gp_first:2026-195"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
     "task": "gp_last:2026-195"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "satcat": 0
+    },
+    "status": "ok",
     "task": "satcat:2026-195"
    },
    {
     "rows_new": {
-     "gp_elements": 23
+     "gp_elements": 0
     },
     "status": "ok",
     "task": "gp_current:2025-271"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
     "task": "gp_first:2025-271"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
     "task": "gp_last:2025-271"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "satcat": 0
+    },
+    "status": "ok",
     "task": "satcat:2025-271"
    },
    {
     "rows_new": {
-     "gp_elements": 3
+     "gp_elements": 0
     },
     "status": "ok",
     "task": "gp_current:2014-058"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
     "task": "gp_first:2014-058"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
     "task": "gp_last:2014-058"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "satcat": 0
+    },
+    "status": "ok",
     "task": "satcat:2014-058"
    },
    {
     "rows_new": {
-     "gp_elements": 89
+     "gp_elements": 11
     },
     "status": "ok",
     "task": "gp_decaying"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "satcat": 6
+    },
+    "status": "ok",
     "task": "satcat_full"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "space_weather": 2
+    },
+    "status": "ok",
     "task": "space_weather"
    },
    {
@@ -236,7 +296,7 @@
    },
    {
     "rows_new": {
-     "f107_live": 2,
+     "f107_live": 1,
      "kp_live": 3
     },
     "status": "ok",
@@ -250,35 +310,35 @@
  },
  "last_success": {
   "gcat": "2026-10-27T05:19:18+00:00",
-  "gp_current:1981-043": "2026-10-28T22:43:37+00:00",
-  "gp_current:1988-078": "2026-10-28T22:43:37+00:00",
-  "gp_current:2014-058": "2026-10-28T22:43:37+00:00",
-  "gp_current:2025-112": "2026-10-28T22:43:37+00:00",
-  "gp_current:2025-271": "2026-10-28T22:43:37+00:00",
-  "gp_current:2026-195": "2026-10-28T22:43:37+00:00",
-  "gp_decaying": "2026-10-28T22:43:37+00:00",
-  "gp_first:1981-043": "2026-10-28T05:58:33+00:00",
-  "gp_first:1988-078": "2026-10-28T05:58:33+00:00",
-  "gp_first:2014-058": "2026-10-28T05:58:33+00:00",
-  "gp_first:2025-112": "2026-10-28T05:58:33+00:00",
-  "gp_first:2025-271": "2026-10-28T05:58:33+00:00",
-  "gp_first:2026-195": "2026-10-28T05:58:33+00:00",
-  "gp_last:1981-043": "2026-10-28T05:58:33+00:00",
-  "gp_last:1988-078": "2026-10-28T05:58:33+00:00",
-  "gp_last:2014-058": "2026-10-28T05:58:33+00:00",
-  "gp_last:2025-112": "2026-10-28T05:58:33+00:00",
-  "gp_last:2025-271": "2026-10-28T05:58:33+00:00",
-  "gp_last:2026-195": "2026-10-28T05:58:33+00:00",
+  "gp_current:1981-043": "2026-10-29T06:05:11+00:00",
+  "gp_current:1988-078": "2026-10-29T06:05:11+00:00",
+  "gp_current:2014-058": "2026-10-29T06:05:11+00:00",
+  "gp_current:2025-112": "2026-10-29T06:05:11+00:00",
+  "gp_current:2025-271": "2026-10-29T06:05:11+00:00",
+  "gp_current:2026-195": "2026-10-29T06:05:11+00:00",
+  "gp_decaying": "2026-10-29T06:05:11+00:00",
+  "gp_first:1981-043": "2026-10-29T06:05:11+00:00",
+  "gp_first:1988-078": "2026-10-29T06:05:11+00:00",
+  "gp_first:2014-058": "2026-10-29T06:05:11+00:00",
+  "gp_first:2025-112": "2026-10-29T06:05:11+00:00",
+  "gp_first:2025-271": "2026-10-29T06:05:11+00:00",
+  "gp_first:2026-195": "2026-10-29T06:05:11+00:00",
+  "gp_last:1981-043": "2026-10-29T06:05:11+00:00",
+  "gp_last:1988-078": "2026-10-29T06:05:11+00:00",
+  "gp_last:2014-058": "2026-10-29T06:05:11+00:00",
+  "gp_last:2025-112": "2026-10-29T06:05:11+00:00",
+  "gp_last:2025-271": "2026-10-29T06:05:11+00:00",
+  "gp_last:2026-195": "2026-10-29T06:05:11+00:00",
   "reentry_backfill": "2026-10-26T05:03:08+00:00",
-  "satcat:1981-043": "2026-10-28T05:58:33+00:00",
-  "satcat:1988-078": "2026-10-28T05:58:33+00:00",
-  "satcat:2014-058": "2026-10-28T05:58:33+00:00",
-  "satcat:2025-112": "2026-10-28T05:58:33+00:00",
-  "satcat:2025-271": "2026-10-28T05:58:33+00:00",
-  "satcat:2026-195": "2026-10-28T05:58:33+00:00",
-  "satcat_full": "2026-10-28T05:58:33+00:00",
-  "space_weather": "2026-10-28T05:58:33+00:00",
-  "swpc": "2026-10-28T22:43:37+00:00"
+  "satcat:1981-043": "2026-10-29T06:05:11+00:00",
+  "satcat:1988-078": "2026-10-29T06:05:11+00:00",
+  "satcat:2014-058": "2026-10-29T06:05:11+00:00",
+  "satcat:2025-112": "2026-10-29T06:05:11+00:00",
+  "satcat:2025-271": "2026-10-29T06:05:11+00:00",
+  "satcat:2026-195": "2026-10-29T06:05:11+00:00",
+  "satcat_full": "2026-10-29T06:05:11+00:00",
+  "space_weather": "2026-10-29T06:05:11+00:00",
+  "swpc": "2026-10-29T06:05:11+00:00"
  },
  "runs": [
   {
@@ -696,6 +756,19 @@
    },
    "run_id": "20261028T224337Z-1940cf",
    "started_at": "2026-10-28T22:43:37+00:00",
+   "status": "partial"
+  },
+  {
+   "network_calls": 30,
+   "rows_new": {
+    "f107_live": 1,
+    "gp_elements": 11,
+    "kp_live": 3,
+    "satcat": 6,
+    "space_weather": 2
+   },
+   "run_id": "20261029T060511Z-4098d8",
+   "started_at": "2026-10-29T06:05:11+00:00",
    "status": "partial"
   }
  ]
