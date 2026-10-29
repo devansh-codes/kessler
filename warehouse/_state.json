@@ -90,17 +90,17 @@
  "last_run": {
   "network_calls": 10,
   "rows_new": {
-   "f107_live": 0,
-   "gp_elements": 142,
-   "kp_live": 2
+   "f107_live": 2,
+   "gp_elements": 148,
+   "kp_live": 3
   },
-  "run_id": "20261029T132439Z-e0ef79",
-  "started_at": "2026-10-29T13:24:39+00:00",
+  "run_id": "20261029T225324Z-9a0612",
+  "started_at": "2026-10-29T22:53:24+00:00",
   "status": "partial",
   "tasks": [
    {
     "rows_new": {
-     "gp_elements": 6
+     "gp_elements": 11
     },
     "status": "ok",
     "task": "gp_current:1988-078"
@@ -119,7 +119,7 @@
    },
    {
     "rows_new": {
-     "gp_elements": 3
+     "gp_elements": 6
     },
     "status": "ok",
     "task": "gp_current:1981-043"
@@ -138,7 +138,7 @@
    },
    {
     "rows_new": {
-     "gp_elements": 24
+     "gp_elements": 20
     },
     "status": "ok",
     "task": "gp_current:2025-112"
@@ -157,7 +157,7 @@
    },
    {
     "rows_new": {
-     "gp_elements": 3
+     "gp_elements": 8
     },
     "status": "ok",
     "task": "gp_current:2026-195"
@@ -176,7 +176,7 @@
    },
    {
     "rows_new": {
-     "gp_elements": 20
+     "gp_elements": 19
     },
     "status": "ok",
     "task": "gp_current:2025-271"
@@ -214,7 +214,7 @@
    },
    {
     "rows_new": {
-     "gp_elements": 85
+     "gp_elements": 83
     },
     "status": "ok",
     "task": "gp_decaying"
@@ -234,8 +234,8 @@
    },
    {
     "rows_new": {
-     "f107_live": 0,
-     "kp_live": 2
+     "f107_live": 2,
+     "kp_live": 3
     },
     "status": "ok",
     "task": "swpc"
@@ -248,13 +248,13 @@
  },
  "last_success": {
   "gcat": "2026-10-27T05:19:18+00:00",
-  "gp_current:1981-043": "2026-10-29T13:24:39+00:00",
-  "gp_current:1988-078": "2026-10-29T13:24:39+00:00",
-  "gp_current:2014-058": "2026-10-29T13:24:39+00:00",
-  "gp_current:2025-112": "2026-10-29T13:24:39+00:00",
-  "gp_current:2025-271": "2026-10-29T13:24:39+00:00",
-  "gp_current:2026-195": "2026-10-29T13:24:39+00:00",
-  "gp_decaying": "2026-10-29T13:24:39+00:00",
+  "gp_current:1981-043": "2026-10-29T22:53:24+00:00",
+  "gp_current:1988-078": "2026-10-29T22:53:24+00:00",
+  "gp_current:2014-058": "2026-10-29T22:53:24+00:00",
+  "gp_current:2025-112": "2026-10-29T22:53:24+00:00",
+  "gp_current:2025-271": "2026-10-29T22:53:24+00:00",
+  "gp_current:2026-195": "2026-10-29T22:53:24+00:00",
+  "gp_decaying": "2026-10-29T22:53:24+00:00",
   "gp_first:1981-043": "2026-10-29T06:05:11+00:00",
   "gp_first:1988-078": "2026-10-29T06:05:11+00:00",
   "gp_first:2014-058": "2026-10-29T06:05:11+00:00",
@@ -276,7 +276,7 @@
   "satcat:2026-195": "2026-10-29T06:05:11+00:00",
   "satcat_full": "2026-10-29T06:05:11+00:00",
   "space_weather": "2026-10-29T06:05:11+00:00",
-  "swpc": "2026-10-29T13:24:39+00:00"
+  "swpc": "2026-10-29T22:53:24+00:00"
  },
  "runs": [
   {
@@ -718,6 +718,17 @@
    },
    "run_id": "20261029T132439Z-e0ef79",
    "started_at": "2026-10-29T13:24:39+00:00",
+   "status": "partial"
+  },
+  {
+   "network_calls": 10,
+   "rows_new": {
+    "f107_live": 2,
+    "gp_elements": 148,
+    "kp_live": 3
+   },
+   "run_id": "20261029T225324Z-9a0612",
+   "started_at": "2026-10-29T22:53:24+00:00",
    "status": "partial"
   }
  ]
