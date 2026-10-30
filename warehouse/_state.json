@@ -88,205 +88,143 @@
  "backfill_requests": {},
  "gcat_release": "1.8.8",
  "last_run": {
-  "network_calls": 30,
+  "network_calls": 10,
   "rows_new": {
-   "f107_live": 1,
-   "gp_elements": 173,
-   "kp_live": 3,
-   "satcat": 9,
-   "space_weather": 1
+   "f107_live": 0,
+   "gp_elements": 16,
+   "kp_live": 2
   },
-  "run_id": "20261030T060553Z-cebd44",
-  "started_at": "2026-10-30T06:05:53+00:00",
+  "run_id": "20261030T131445Z-d7248f",
+  "started_at": "2026-10-30T13:14:45+00:00",
   "status": "partial",
   "tasks": [
    {
     "rows_new": {
-     "gp_elements": 12
+     "gp_elements": 0
     },
     "status": "ok",
     "task": "gp_current:1988-078"
    },
    {
-    "rows_new": {
-     "gp_elements": 0
-    },
-    "status": "ok",
+    "status": "skipped (not due)",
     "task": "gp_first:1988-078"
    },
    {
-    "rows_new": {
-     "gp_elements": 0
-    },
-    "status": "ok",
+    "status": "skipped (not due)",
     "task": "gp_last:1988-078"
    },
    {
-    "rows_new": {
-     "satcat": 0
-    },
-    "status": "ok",
+    "status": "skipped (not due)",
     "task": "satcat:1988-078"
    },
    {
     "rows_new": {
-     "gp_elements": 6
+     "gp_elements": 0
     },
     "status": "ok",
     "task": "gp_current:1981-043"
    },
    {
-    "rows_new": {
-     "gp_elements": 0
-    },
-    "status": "ok",
+    "status": "skipped (not due)",
     "task": "gp_first:1981-043"
    },
    {
-    "rows_new": {
-     "gp_elements": 0
-    },
-    "status": "ok",
+    "status": "skipped (not due)",
     "task": "gp_last:1981-043"
    },
    {
-    "rows_new": {
-     "satcat": 0
-    },
-    "status": "ok",
+    "status": "skipped (not due)",
     "task": "satcat:1981-043"
    },
    {
     "rows_new": {
-     "gp_elements": 23
+     "gp_elements": 0
     },
     "status": "ok",
     "task": "gp_current:2025-112"
    },
    {
-    "rows_new": {
-     "gp_elements": 0
-    },
-    "status": "ok",
+    "status": "skipped (not due)",
     "task": "gp_first:2025-112"
    },
    {
-    "rows_new": {
-     "gp_elements": 0
-    },
-    "status": "ok",
+    "status": "skipped (not due)",
     "task": "gp_last:2025-112"
    },
    {
-    "rows_new": {
-     "satcat": 0
-    },
-    "status": "ok",
+    "status": "skipped (not due)",
     "task": "satcat:2025-112"
    },
    {
     "rows_new": {
-     "gp_elements": 8
+     "gp_elements": 0
     },
     "status": "ok",
     "task": "gp_current:2026-195"
    },
    {
-    "rows_new": {
-     "gp_elements": 0
-    },
-    "status": "ok",
+    "status": "skipped (not due)",
     "task": "gp_first:2026-195"
    },
    {
-    "rows_new": {
-     "gp_elements": 0
-    },
-    "status": "ok",
+    "status": "skipped (not due)",
     "task": "gp_last:2026-195"
    },
    {
-    "rows_new": {
-     "satcat": 0
-    },
-    "status": "ok",
+    "status": "skipped (not due)",
     "task": "satcat:2026-195"
    },
    {
     "rows_new": {
-     "gp_elements": 22
+     "gp_elements": 0
     },
     "status": "ok",
     "task": "gp_current:2025-271"
    },
    {
-    "rows_new": {
-     "gp_elements": 0
-    },
-    "status": "ok",
+    "status": "skipped (not due)",
     "task": "gp_first:2025-271"
    },
    {
-    "rows_new": {
-     "gp_elements": 0
-    },
-    "status": "ok",
+    "status": "skipped (not due)",
     "task": "gp_last:2025-271"
    },
    {
-    "rows_new": {
-     "satcat": 0
-    },
-    "status": "ok",
+    "status": "skipped (not due)",
     "task": "satcat:2025-271"
    },
    {
     "rows_new": {
-     "gp_elements": 2
+     "gp_elements": 0
     },
     "status": "ok",
     "task": "gp_current:2014-058"
    },
    {
-    "rows_new": {
-     "gp_elements": 0
-    },
-    "status": "ok",
+    "status": "skipped (not due)",
     "task": "gp_first:2014-058"
    },
    {
-    "rows_new": {
-     "gp_elements": 0
-    },
-    "status": "ok",
+    "status": "skipped (not due)",
     "task": "gp_last:2014-058"
    },
    {
-    "rows_new": {
-     "satcat": 0
-    },
-    "status": "ok",
+    "status": "skipped (not due)",
     "task": "satcat:2014-058"
    },
    {
     "rows_new": {
-     "gp_elements": 100
+     "gp_elements": 16
     },
     "status": "ok",
     "task": "gp_decaying"
    },
    {
-    "rows_new": {
-     "satcat": 9
-    },
-    "status": "ok",
+    "status": "skipped (not due)",
     "task": "satcat_full"
    },
    {
-    "rows_new": {
-     "space_weather": 1
-    },
-    "status": "ok",
+    "status": "skipped (not due)",
     "task": "space_weather"
    },
    {
@@ -296,8 +234,8 @@
    },
    {
     "rows_new": {
-     "f107_live": 1,
-     "kp_live": 3
+     "f107_live": 0,
+     "kp_live": 2
     },
     "status": "ok",
     "task": "swpc"
@@ -310,13 +248,13 @@
  },
  "last_success": {
   "gcat": "2026-10-27T05:19:18+00:00",
-  "gp_current:1981-043": "2026-10-30T06:05:53+00:00",
-  "gp_current:1988-078": "2026-10-30T06:05:53+00:00",
-  "gp_current:2014-058": "2026-10-30T06:05:53+00:00",
-  "gp_current:2025-112": "2026-10-30T06:05:53+00:00",
-  "gp_current:2025-271": "2026-10-30T06:05:53+00:00",
-  "gp_current:2026-195": "2026-10-30T06:05:53+00:00",
-  "gp_decaying": "2026-10-30T06:05:53+00:00",
+  "gp_current:1981-043": "2026-10-30T13:14:45+00:00",
+  "gp_current:1988-078": "2026-10-30T13:14:45+00:00",
+  "gp_current:2014-058": "2026-10-30T13:14:45+00:00",
+  "gp_current:2025-112": "2026-10-30T13:14:45+00:00",
+  "gp_current:2025-271": "2026-10-30T13:14:45+00:00",
+  "gp_current:2026-195": "2026-10-30T13:14:45+00:00",
+  "gp_decaying": "2026-10-30T13:14:45+00:00",
   "gp_first:1981-043": "2026-10-30T06:05:53+00:00",
   "gp_first:1988-078": "2026-10-30T06:05:53+00:00",
   "gp_first:2014-058": "2026-10-30T06:05:53+00:00",
@@ -338,7 +276,7 @@
   "satcat:2026-195": "2026-10-30T06:05:53+00:00",
   "satcat_full": "2026-10-30T06:05:53+00:00",
   "space_weather": "2026-10-30T06:05:53+00:00",
-  "swpc": "2026-10-30T06:05:53+00:00"
+  "swpc": "2026-10-30T13:14:45+00:00"
  },
  "runs": [
   {
@@ -804,6 +742,17 @@
    },
    "run_id": "20261030T060553Z-cebd44",
    "started_at": "2026-10-30T06:05:53+00:00",
+   "status": "partial"
+  },
+  {
+   "network_calls": 10,
+   "rows_new": {
+    "f107_live": 0,
+    "gp_elements": 16,
+    "kp_live": 2
+   },
+   "run_id": "20261030T131445Z-d7248f",
+   "started_at": "2026-10-30T13:14:45+00:00",
    "status": "partial"
   }
  ]
