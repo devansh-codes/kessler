@@ -105,19 +105,19 @@
  },
  "gcat_release": "1.8.8",
  "last_run": {
-  "network_calls": 4,
+  "network_calls": 10,
   "rows_new": {
-   "f107_live": 0,
-   "gp_elements": 4,
-   "kp_live": 2
+   "f107_live": 2,
+   "gp_elements": 109,
+   "kp_live": 3
   },
-  "run_id": "20261108T134530Z-7bd28e",
-  "started_at": "2026-11-08T13:45:30+00:00",
+  "run_id": "20261108T221824Z-7c0107",
+  "started_at": "2026-11-08T22:18:24+00:00",
   "status": "partial",
   "tasks": [
    {
     "rows_new": {
-     "gp_elements": 4
+     "gp_elements": 0
     },
     "status": "ok",
     "task": "gp_current:1988-078"
@@ -135,8 +135,10 @@
     "task": "satcat:1988-078"
    },
    {
-    "error": "non-200 response; stopping (no retry) [503] https://celestrak.org/NORAD/elements/gp.php?INTDES=1981-043&FORMAT=CSV",
-    "status": "error",
+    "rows_new": {
+     "gp_elements": 10
+    },
+    "status": "ok",
     "task": "gp_current:1981-043"
    },
    {
@@ -152,7 +154,10 @@
     "task": "satcat:1981-043"
    },
    {
-    "status": "skipped (host stopped after error)",
+    "rows_new": {
+     "gp_elements": 11
+    },
+    "status": "ok",
     "task": "gp_current:2025-112"
    },
    {
@@ -168,7 +173,10 @@
     "task": "satcat:2025-112"
    },
    {
-    "status": "skipped (host stopped after error)",
+    "rows_new": {
+     "gp_elements": 6
+    },
+    "status": "ok",
     "task": "gp_current:2026-195"
    },
    {
@@ -184,7 +192,10 @@
     "task": "satcat:2026-195"
    },
    {
-    "status": "skipped (host stopped after error)",
+    "rows_new": {
+     "gp_elements": 24
+    },
+    "status": "ok",
     "task": "gp_current:2025-271"
    },
    {
@@ -200,7 +211,10 @@
     "task": "satcat:2025-271"
    },
    {
-    "status": "skipped (host stopped after error)",
+    "rows_new": {
+     "gp_elements": 2
+    },
+    "status": "ok",
     "task": "gp_current:2014-058"
    },
    {
@@ -216,7 +230,10 @@
     "task": "satcat:2014-058"
    },
    {
-    "status": "skipped (host stopped after error)",
+    "rows_new": {
+     "gp_elements": 56
+    },
+    "status": "ok",
     "task": "gp_decaying"
    },
    {
@@ -228,13 +245,14 @@
     "task": "space_weather"
    },
    {
-    "status": "skipped (host stopped after error)",
+    "error": "non-200 response; stopping (no retry) [404] https://celestrak.org/NORAD/elements/gp-last.php?INTDES=2026-130&FORMAT=CSV",
+    "status": "error",
     "task": "reentry_backfill"
    },
    {
     "rows_new": {
-     "f107_live": 0,
-     "kp_live": 2
+     "f107_live": 2,
+     "kp_live": 3
     },
     "status": "ok",
     "task": "swpc"
@@ -247,13 +265,13 @@
  },
  "last_success": {
   "gcat": "2026-11-03T07:01:49+00:00",
-  "gp_current:1981-043": "2026-11-08T06:23:06+00:00",
-  "gp_current:1988-078": "2026-11-08T13:45:30+00:00",
-  "gp_current:2014-058": "2026-11-08T06:23:06+00:00",
-  "gp_current:2025-112": "2026-11-08T06:23:06+00:00",
-  "gp_current:2025-271": "2026-11-08T06:23:06+00:00",
-  "gp_current:2026-195": "2026-11-08T06:23:06+00:00",
-  "gp_decaying": "2026-11-08T06:23:06+00:00",
+  "gp_current:1981-043": "2026-11-08T22:18:24+00:00",
+  "gp_current:1988-078": "2026-11-08T22:18:24+00:00",
+  "gp_current:2014-058": "2026-11-08T22:18:24+00:00",
+  "gp_current:2025-112": "2026-11-08T22:18:24+00:00",
+  "gp_current:2025-271": "2026-11-08T22:18:24+00:00",
+  "gp_current:2026-195": "2026-11-08T22:18:24+00:00",
+  "gp_decaying": "2026-11-08T22:18:24+00:00",
   "gp_first:1981-043": "2026-11-08T06:23:06+00:00",
   "gp_first:1988-078": "2026-11-08T06:23:06+00:00",
   "gp_first:2014-058": "2026-11-08T06:23:06+00:00",
@@ -275,16 +293,9 @@
   "satcat:2026-195": "2026-11-08T06:23:06+00:00",
   "satcat_full": "2026-11-08T06:23:06+00:00",
   "space_weather": "2026-11-08T06:23:06+00:00",
-  "swpc": "2026-11-08T13:45:30+00:00"
+  "swpc": "2026-11-08T22:18:24+00:00"
  },
  "runs": [
-  {
-   "network_calls": 0,
-   "rows_new": {},
-   "run_id": "20261020T041852Z-e254d1",
-   "started_at": "2026-10-20T04:18:52+00:00",
-   "status": "ok"
-  },
   {
    "network_calls": 17,
    "rows_new": {
@@ -974,6 +985,17 @@
    },
    "run_id": "20261108T134530Z-7bd28e",
    "started_at": "2026-11-08T13:45:30+00:00",
+   "status": "partial"
+  },
+  {
+   "network_calls": 10,
+   "rows_new": {
+    "f107_live": 2,
+    "gp_elements": 109,
+    "kp_live": 3
+   },
+   "run_id": "20261108T221824Z-7c0107",
+   "started_at": "2026-11-08T22:18:24+00:00",
    "status": "partial"
   }
  ]
