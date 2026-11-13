@@ -109,135 +109,215 @@
  "backfill_requests": {},
  "gcat_release": "1.8.9",
  "last_run": {
-  "network_calls": 4,
+  "network_calls": 30,
   "rows_new": {
-   "f107_live": 1,
-   "gp_elements": 14,
-   "kp_live": 4
+   "f107_live": 2,
+   "gp_elements": 153,
+   "kp_live": 4,
+   "satcat": 6,
+   "space_weather": 1
   },
-  "run_id": "20261112T201118Z-f534a4",
-  "started_at": "2026-11-12T20:11:18+00:00",
+  "run_id": "20261113T065901Z-a03975",
+  "started_at": "2026-11-13T06:59:01+00:00",
   "status": "partial",
   "tasks": [
    {
     "rows_new": {
-     "gp_elements": 14
+     "gp_elements": 15
     },
     "status": "ok",
     "task": "gp_current:1988-078"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
     "task": "gp_first:1988-078"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
     "task": "gp_last:1988-078"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "satcat": 0
+    },
+    "status": "ok",
     "task": "satcat:1988-078"
    },
    {
-    "error": "non-200 response; stopping (no retry) [500] https://celestrak.org/NORAD/elements/gp.php?INTDES=1981-043&FORMAT=CSV",
-    "status": "error",
+    "rows_new": {
+     "gp_elements": 12
+    },
+    "status": "ok",
     "task": "gp_current:1981-043"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
     "task": "gp_first:1981-043"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
     "task": "gp_last:1981-043"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "satcat": 0
+    },
+    "status": "ok",
     "task": "satcat:1981-043"
    },
    {
-    "status": "skipped (host stopped after error)",
+    "rows_new": {
+     "gp_elements": 24
+    },
+    "status": "ok",
     "task": "gp_current:2025-112"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
     "task": "gp_first:2025-112"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
     "task": "gp_last:2025-112"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "satcat": 0
+    },
+    "status": "ok",
     "task": "satcat:2025-112"
    },
    {
-    "status": "skipped (host stopped after error)",
+    "rows_new": {
+     "gp_elements": 8
+    },
+    "status": "ok",
     "task": "gp_current:2026-195"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
     "task": "gp_first:2026-195"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
     "task": "gp_last:2026-195"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "satcat": 0
+    },
+    "status": "ok",
     "task": "satcat:2026-195"
    },
    {
-    "status": "skipped (host stopped after error)",
+    "rows_new": {
+     "gp_elements": 25
+    },
+    "status": "ok",
     "task": "gp_current:2025-271"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
     "task": "gp_first:2025-271"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
     "task": "gp_last:2025-271"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "satcat": 0
+    },
+    "status": "ok",
     "task": "satcat:2025-271"
    },
    {
-    "status": "skipped (host stopped after error)",
+    "rows_new": {
+     "gp_elements": 4
+    },
+    "status": "ok",
     "task": "gp_current:2014-058"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
     "task": "gp_first:2014-058"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "gp_elements": 0
+    },
+    "status": "ok",
     "task": "gp_last:2014-058"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "satcat": 0
+    },
+    "status": "ok",
     "task": "satcat:2014-058"
    },
    {
-    "status": "skipped (host stopped after error)",
+    "rows_new": {
+     "gp_elements": 65
+    },
+    "status": "ok",
     "task": "gp_decaying"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "satcat": 6
+    },
+    "status": "ok",
     "task": "satcat_full"
    },
    {
-    "status": "skipped (not due)",
+    "rows_new": {
+     "space_weather": 1
+    },
+    "status": "ok",
     "task": "space_weather"
    },
    {
-    "status": "skipped (host stopped after error)",
+    "error": "non-200 response; stopping (no retry) [404] https://celestrak.org/NORAD/elements/gp-last.php?INTDES=2025-010&FORMAT=CSV",
+    "status": "error",
     "task": "reentry_backfill"
    },
    {
     "rows_new": {
-     "f107_live": 1,
+     "f107_live": 2,
      "kp_live": 4
     },
     "status": "ok",
@@ -251,48 +331,37 @@
  },
  "last_success": {
   "gcat": "2026-11-10T07:33:04+00:00",
-  "gp_current:1981-043": "2026-11-12T07:27:49+00:00",
-  "gp_current:1988-078": "2026-11-12T20:11:18+00:00",
-  "gp_current:2014-058": "2026-11-12T07:27:49+00:00",
-  "gp_current:2025-112": "2026-11-12T07:27:49+00:00",
-  "gp_current:2025-271": "2026-11-12T07:27:49+00:00",
-  "gp_current:2026-195": "2026-11-12T07:27:49+00:00",
-  "gp_decaying": "2026-11-12T07:27:49+00:00",
-  "gp_first:1981-043": "2026-11-12T07:27:49+00:00",
-  "gp_first:1988-078": "2026-11-12T07:27:49+00:00",
-  "gp_first:2014-058": "2026-11-12T07:27:49+00:00",
-  "gp_first:2025-112": "2026-11-12T07:27:49+00:00",
-  "gp_first:2025-271": "2026-11-12T07:27:49+00:00",
-  "gp_first:2026-195": "2026-11-12T07:27:49+00:00",
-  "gp_last:1981-043": "2026-11-12T07:27:49+00:00",
-  "gp_last:1988-078": "2026-11-12T07:27:49+00:00",
-  "gp_last:2014-058": "2026-11-12T07:27:49+00:00",
-  "gp_last:2025-112": "2026-11-12T07:27:49+00:00",
-  "gp_last:2025-271": "2026-11-12T07:27:49+00:00",
-  "gp_last:2026-195": "2026-11-12T07:27:49+00:00",
+  "gp_current:1981-043": "2026-11-13T06:59:01+00:00",
+  "gp_current:1988-078": "2026-11-13T06:59:01+00:00",
+  "gp_current:2014-058": "2026-11-13T06:59:01+00:00",
+  "gp_current:2025-112": "2026-11-13T06:59:01+00:00",
+  "gp_current:2025-271": "2026-11-13T06:59:01+00:00",
+  "gp_current:2026-195": "2026-11-13T06:59:01+00:00",
+  "gp_decaying": "2026-11-13T06:59:01+00:00",
+  "gp_first:1981-043": "2026-11-13T06:59:01+00:00",
+  "gp_first:1988-078": "2026-11-13T06:59:01+00:00",
+  "gp_first:2014-058": "2026-11-13T06:59:01+00:00",
+  "gp_first:2025-112": "2026-11-13T06:59:01+00:00",
+  "gp_first:2025-271": "2026-11-13T06:59:01+00:00",
+  "gp_first:2026-195": "2026-11-13T06:59:01+00:00",
+  "gp_last:1981-043": "2026-11-13T06:59:01+00:00",
+  "gp_last:1988-078": "2026-11-13T06:59:01+00:00",
+  "gp_last:2014-058": "2026-11-13T06:59:01+00:00",
+  "gp_last:2025-112": "2026-11-13T06:59:01+00:00",
+  "gp_last:2025-271": "2026-11-13T06:59:01+00:00",
+  "gp_last:2026-195": "2026-11-13T06:59:01+00:00",
   "reentry_backfill": "2026-11-06T07:04:27+00:00",
-  "satcat:1981-043": "2026-11-12T07:27:49+00:00",
-  "satcat:1988-078": "2026-11-12T07:27:49+00:00",
-  "satcat:2014-058": "2026-11-12T07:27:49+00:00",
-  "satcat:2025-112": "2026-11-12T07:27:49+00:00",
-  "satcat:2025-271": "2026-11-12T07:27:49+00:00",
-  "satcat:2026-195": "2026-11-12T07:27:49+00:00",
-  "satcat_full": "2026-11-12T07:27:49+00:00",
-  "space_weather": "2026-11-12T07:27:49+00:00",
-  "swpc": "2026-11-12T20:11:18+00:00"
+  "satcat:1981-043": "2026-11-13T06:59:01+00:00",
+  "satcat:1988-078": "2026-11-13T06:59:01+00:00",
+  "satcat:2014-058": "2026-11-13T06:59:01+00:00",
+  "satcat:2025-112": "2026-11-13T06:59:01+00:00",
+  "satcat:2025-271": "2026-11-13T06:59:01+00:00",
+  "satcat:2026-195": "2026-11-13T06:59:01+00:00",
+  "satcat_full": "2026-11-13T06:59:01+00:00",
+  "space_weather": "2026-11-13T06:59:01+00:00",
+  "swpc": "2026-11-13T06:59:01+00:00"
  },
  "runs": [
-  {
-   "network_calls": 17,
-   "rows_new": {
-    "f107_live": 0,
-    "gp_elements": 157,
-    "kp_live": 3
-   },
-   "run_id": "20261022T120945Z-e0f3f4",
-   "started_at": "2026-10-22T12:09:45+00:00",
-   "status": "ok"
-  },
   {
    "network_calls": 17,
    "rows_new": {
@@ -988,6 +1057,19 @@
    },
    "run_id": "20261112T201118Z-f534a4",
    "started_at": "2026-11-12T20:11:18+00:00",
+   "status": "partial"
+  },
+  {
+   "network_calls": 30,
+   "rows_new": {
+    "f107_live": 2,
+    "gp_elements": 153,
+    "kp_live": 4,
+    "satcat": 6,
+    "space_weather": 1
+   },
+   "run_id": "20261113T065901Z-a03975",
+   "started_at": "2026-11-13T06:59:01+00:00",
    "status": "partial"
   }
  ]
